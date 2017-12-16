@@ -1,4 +1,4 @@
-class User < ApplicatonRecord
-  
+class User < ApplicationRecord
+
 
 end
