@@ -1,0 +1,19 @@
+<div class="">
+  <section>
+    <h1>Idea Box Account Registration</h1>
+  </section>
+  <section>
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.text_field :password %>
+
+      <%= f.submit "Log In"%>
+    <% end %>
+  </section>
+  <section>
+    <p>Need an account? <%= link_to "Create Account", new_user_path %></p>
+  </section>
+</div>
