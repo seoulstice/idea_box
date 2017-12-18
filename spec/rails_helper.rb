@@ -7,11 +7,11 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
-require ‘rspec/rails’
-require ‘pry’
-require ‘database_cleaner’
-require ‘capybara/rails’
-require ‘support/factory_girl’
+require 'rspec/rails'
+require 'pry'
+require 'database_cleaner'
+require 'capybara/rails'
+require 'support/factory_bot'
 
 ActiveRecord::Migration.maintain_test_schema!
 DatabaseCleaner.strategy = :truncation
@@ -25,7 +25,7 @@ end
 
 RSpec.configure do |config|
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   config.before(:all) do
     DatabaseCleaner.clean

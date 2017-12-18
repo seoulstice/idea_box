@@ -5,9 +5,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
-
-    redirect_to user_path(user)
+    @user = User.new(user_params)
+    if @user.save
+      flash[:success] = "Welcome to Idea Box, #{@user.name}!"
+      redirect_to user_path(@user)
+    else
+      # flash[:failure] = ""
+      render :new
+    end
   end
 
   def show
