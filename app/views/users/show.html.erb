@@ -1,8 +1,9 @@
 <div class="">
-  <h2>Account Info</h2>
+  <h2><%= @user.name %>'s Idea Box</h2>
 </div>
-
 <div class="">
-  <p><%= @user.name %></p>
   <%= @user.email %>
+</div>
+<div class="">
+  <%= link_to 'Create An Idea', new_user_idea_path(@user) %>
 </div>

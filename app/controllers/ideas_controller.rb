@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:edit, :update :show, :destroy]
+  before_action :set_idea, only: [:edit, :update, :show, :destroy]
 
   def new
     @idea = Idea.new

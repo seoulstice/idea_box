@@ -1,9 +1,10 @@
 <div class="">
   <%= form_for  do |f| %>
-    <%= f.label  %>
-    <%= f.text_field  %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
 
-
-
-    <%= f.label email %>
+    <%= f.label :category %>
+    <%= f.collection_select(:category, Category.all, :id, ) %>
+    <%= f.label email %
+  <% end %>
 </div>
