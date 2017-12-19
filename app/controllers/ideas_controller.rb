@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:edit, :update, :show, :destroy]
-  before_action :set_user, only: [:new, :create]
+  before_action :set_idea, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:new, :create, :edit]
 
   def new
     @idea = Idea.new
@@ -9,7 +9,7 @@ class IdeasController < ApplicationController
   def create
     @idea = @user.ideas.new(idea_params)
     if @idea.save
-      flash[:success] = "Idea Successfully Created"
+      flash.now[:success] = "Idea Successfully Created"
       redirect_to user_path(@user)
     else
       flash[:failure] = "Idea Not Saved"
@@ -23,13 +23,17 @@ class IdeasController < ApplicationController
 
   def update
     @idea.update(idea_params)
-    redirect_to user_idea_path(idea.user, idea)
+    redirect_to user_ideas_path(@idea.user)
   end
 
   def destroy
     @idea.destroy
 
-    redirect_to user_idea_path(@idea.user, @user)
+    redirect_to user_ideas_path(@idea.user)
+  end
+
+  def index
+    @ideas = Idea.all
   end
   private
 
