@@ -1,0 +1,12 @@
+<div class="">
+  <%= form_for [@user, @idea] do |f| %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+
+    <%= f.label :category_id %>
+    <%= f.collection_select(:category_id, Category.all, :id, :label ) %>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>

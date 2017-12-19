@@ -11,7 +11,7 @@ require 'rspec/rails'
 require 'pry'
 require 'database_cleaner'
 require 'capybara/rails'
-require 'support/factory_bot'
+# require 'support/factory_bot'
 
 ActiveRecord::Migration.maintain_test_schema!
 DatabaseCleaner.strategy = :truncation
