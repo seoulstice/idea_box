@@ -7,6 +7,7 @@ class Admin::CategoriesController < Admin::BaseController
   def create
     @category = Category.new(category_params)
     if @category.save
+      # byebug
       flash.now[:success] = "Category Successfully Created"
       redirect_to admin_categories_path
     else
@@ -16,7 +17,9 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def destroy
+    @category.destroy
 
+    redirect_to admin_categories_path
   end
 
   def index
