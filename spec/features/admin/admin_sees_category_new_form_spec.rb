@@ -15,5 +15,4 @@ describe "When a User visits category new form" do
       expect(page).to have_field("category[classification]")
       expect(page).to have_button("Create Category")
     end
-  end
 end

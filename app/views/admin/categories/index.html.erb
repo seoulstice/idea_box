@@ -1,7 +1,7 @@
 <div class="">
   <h1>Admin Categories Index</h1>
 </div>
-<div class="">
+<div class="category">
   <% @categories.each do |category| %>
     <ul>
       <li><%= category.classification %><%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
