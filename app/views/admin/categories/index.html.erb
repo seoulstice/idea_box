@@ -4,7 +4,7 @@
 <div class="">
   <% @categories.each do |category| %>
     <ul>
-      <li><%= category.label %><%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <li><%= category.classification %><%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
     </ul>
   <% end %>
 </div>
