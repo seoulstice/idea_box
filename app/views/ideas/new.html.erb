@@ -3,10 +3,10 @@
     <%= f.label :body %>
     <%= f.text_field :body %>
 
-    <%= f.label :category %>
-    <%= f.collection_select(:category, Category.all, :id, :type ) %>
+    <%= f.label :category_id %>
+    <%= f.collection_select(:category_id, Category.all, :id, :label ) %>
 
     <%= f.submit %>
-    
+
   <% end %>
 </div>
