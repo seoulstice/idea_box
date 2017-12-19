@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  validates :label, presence: true
+  validates :classification, presence: true
 
 end

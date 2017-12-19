@@ -12,7 +12,7 @@ describe "When a User visits category new form" do
       visit new_admin_category_path
 
       expect(page).to have_content("Welcome Admin")
-      expect(page).to have_field("category[label]")
+      expect(page).to have_field("category[classification]")
       expect(page).to have_button("Create Category")
     end
 
@@ -25,7 +25,7 @@ describe "When a User visits category new form" do
 
       visit new_admin_category_path
 
-      fill_in "category[label]", with: "chores"
+      fill_in "category[classification]", with: "chores"
       click_button "Create Category"
       save_and_open_page
 

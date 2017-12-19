@@ -11,5 +11,5 @@ Category.destroy_all
 CATEGORIES = ["Work", "School", "Home", "Hobby", "Financial"]
 
 CATEGORIES.each do |category|
-  Category.create!(label: "#{category}")
+  Category.create!(classification: "#{category}")
 end
