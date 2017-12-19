@@ -8,7 +8,7 @@ class Admin::CategoriesController < Admin::BaseController
     @category = Category.new(category_params)
     if @category.save
       flash.now[:success] = "Category Successfully Created"
-      redirect_to admin_categories_path
+      redirect_to admin_dashboard_path
     else
       flash[:failure] = "Category Not Created"
       render :new
@@ -19,7 +19,7 @@ class Admin::CategoriesController < Admin::BaseController
     @category = Category.find(params[:id])
     @category.destroy
 
-    redirect_to admin_categories_path
+    redirect_to admin_dashboard_path
   end
 
   def index

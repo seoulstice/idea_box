@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories, only: [:new, :create, :destroy, :index]
     resources :images, only: [:new, :create]
+    get '/dashboard', to: 'admin#dashboard'
   end
 
 end
