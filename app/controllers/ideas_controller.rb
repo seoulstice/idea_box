@@ -12,7 +12,7 @@ class IdeasController < ApplicationController
       flash.now[:success] = "Idea Successfully Created"
       redirect_to user_path(@user)
     else
-      flash[:failure] = "Idea Not Saved"
+      flash[:failure] = "Idea Not Created"
       render :new
     end
   end

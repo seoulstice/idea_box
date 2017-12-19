@@ -1,0 +1,10 @@
+<div class="">
+  <h1>Admin Categories Index</h1>
+</div>
+<div class="">
+  <% @categories.each do |category| %>
+    <ul>
+      <li><%= category.label %></li>
+    </ul>
+  <% end %>
+</div>

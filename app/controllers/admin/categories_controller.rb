@@ -5,13 +5,22 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def create
-    @category = Category.create(category_params)
-
-    redirect_to
+    @category = Category.new(category_params)
+    if @category.save
+      flash.now[:success] = "Category Successfully Created"
+      redirect_to admin_categories_path
+    else
+      flash[:failure] = "Category Not Created"
+      render :new
+    end
   end
 
   def destroy
 
+  end
+
+  def index
+    @categories = Category.all
   end
 
   private
