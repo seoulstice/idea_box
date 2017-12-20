@@ -10,7 +10,7 @@ class Admin::ImagesController < Admin::BaseController
       #flash[:success] message goes here
       redirect_to admin_dashboard_path
      else
-
+       render :new
     end
   end
 
@@ -19,4 +19,5 @@ class Admin::ImagesController < Admin::BaseController
     def image_params
       params.require(:image).permit(:url)
     end
+    
 end
