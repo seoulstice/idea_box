@@ -10,3 +10,6 @@
 <div class="">
   <%= link_to "Create An Idea", new_user_idea_path(@user) %>
 </div>
+<div class="">
+  <%= link_to "Admin Dashboard", admin_dashboard_path if current_user && current_user.admin? %>
+</div>

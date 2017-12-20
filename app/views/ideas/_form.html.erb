@@ -1,5 +1,5 @@
 <div class="">
-  <%= form_for [@user, @idea] do |f| %>
+  <%= form_for [current_user, @idea] do |f| %>
     <%= f.label :body %>
     <%= f.text_field :body %>
 
