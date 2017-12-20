@@ -1,10 +1,33 @@
 <div class="">
   <h1>Admin Dashboard</h1>
 </div>
-<div class="category">
-  <% @categories.each do |category| %>
+<div class="">
+  <section>
+    <h3>Categories Index</h3>
+  </section>
+  <section class="category">
+    <% @categories.each do |category| %>
     <ul>
       <li><%= category.classification %><%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
     </ul>
-  <% end %>
+    <% end %>
+  </section>
+  <section>
+    <%= link_to "Create Category", new_admin_category_path %>
+  </section>
+</div>
+<div class="">
+  <section>
+    <h3>Images Index</h3>
+  </section>
+  <section>
+    <% @images.each do |image| %>
+    <ul>
+      <li><%= image.url %></li>
+    </ul>
+    <% end %>
+  </section>
+  <section>
+    <%= link_to "Create Image", new_admin_image_path %>
+  </section>
 </div>

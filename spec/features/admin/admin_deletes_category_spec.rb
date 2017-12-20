@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "When the Admin visits Admin Categories path" do
+describe "When the Admin visits Admin Dashboard path" do
   it "the Admin can delete an existing category"  do
     category_1 = create(:category)
     category_2 = create(:category)
@@ -10,11 +10,12 @@ describe "When the Admin visits Admin Categories path" do
                         role: 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
-    visit admin_categories_path
+    visit admin_dashboard_path
 
-    find(".category", match: :first).click
+    click_link("Delete", match: :first)
 
-    expect(current_path).to eq(admin_categories_path)
+    expect(current_path).to eq(admin_dashboard_path)
+    save_and_open_page
     expect(page).to_not have_content("#{category_1.classification}")
     expect(page).to have_content("#{category_2.classification}")
   end

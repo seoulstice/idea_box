@@ -4,7 +4,7 @@
     <%= f.text_field :body %>
 
     <%= f.label :category_id %>
-    <%= f.collection_select(:category_id, Category.all, :id, :label ) %>
+    <%= f.collection_select(:category_id, Category.all, :id, :classification ) %>
 
     <%= f.submit %>
 

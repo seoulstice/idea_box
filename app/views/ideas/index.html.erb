@@ -2,7 +2,7 @@
   <table>
     <tr>
       <th>Idea</th>
-      <th>Label</th>
+      <th>Category</th>
       <th>Created</th>
       <th>Updated</th>
       <th></th>
@@ -11,7 +11,7 @@
     <% @ideas.each do |idea| %>
     <tr>
       <td><%= idea.body %></td>
-      <td><%= idea.category.label %></td>
+      <td><%= idea.category.classification %></td>
       <td><%= idea.created_at %></td>
       <td><%= idea.updated_at %></td>
       <td><%= link_to "Edit", edit_user_idea_path(idea.user, idea) %></td>
