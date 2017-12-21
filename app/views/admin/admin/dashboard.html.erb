@@ -23,7 +23,8 @@
   <section>
     <% @images.each do |image| %>
     <ul>
-      <li><%= image.url %></li>
+      <p><%= image_tag image.image.url unless image.image.url.nil? %></p>
+
     </ul>
     <% end %>
   </section>

@@ -1,4 +1,4 @@
 class IdeaImage < ApplicationRecord
-  has_many :ideas
-  has_many :images
+  belongs_to :idea
+  belongs_to :image
 end
