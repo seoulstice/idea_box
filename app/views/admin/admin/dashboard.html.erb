@@ -5,13 +5,18 @@
   <section>
     <h3>Categories Index</h3>
   </section>
-  <section class="category">
+  <table class="table">
+    <tr>
+      <th>Category</th>
+      <th></th>
+    </tr>
     <% @categories.each do |category| %>
-    <ul>
-      <li><%= category.classification %><%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
-    </ul>
+    <tr>
+      <td><%= category.classification %></td>
+      <td><%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
-  </section>
+  </table>
   <section>
     <%= link_to "Create Category", new_admin_category_path %>
   </section>
@@ -20,15 +25,15 @@
   <section>
     <h3>Images Index</h3>
   </section>
-  <section>
+  <table class="table">
+    <tr>
+      <th>Image</th>
+    </tr>
     <% @images.each do |image| %>
-    <ul>
-      <p><%= image_tag image.image.url unless image.image.url.nil? %></p>
-
-    </ul>
+    <tr>
+      <td><%= image_tag image.image.thumb.url unless image.image.thumb.url.nil? %></td>
+    </tr>
     <% end %>
-  </section>
-  <section>
-    <%= link_to "Create Image", new_admin_image_path %>
-  </section>
+  </table>
+  <%= link_to "Create Image", new_admin_image_path %>
 </div>

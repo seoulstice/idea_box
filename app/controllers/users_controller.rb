@@ -11,15 +11,14 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to Idea Box, #{@user.name}!"
       redirect_to user_path(@user)
     else
-      # flash[:failure] = ""
+      flash[:failure] = ""
       render :new
     end
   end
 
   def show
     @user = User.find(params[:id])
-    # binding.pry
-    @ideas = @user.ideas
+    @ideas = @user.ideas.order(updated_at: :desc)
   end
 
   private

@@ -4,6 +4,8 @@ class IdeasController < ApplicationController
 
   def new
     @idea = Idea.new
+    @categories = Category.order(:classification)
+    @images = Image.order(:name)
   end
 
   def create
@@ -18,12 +20,13 @@ class IdeasController < ApplicationController
   end
 
   def edit
-
+    @categories = Category.order(:classification)
+    @images = Image.order(:name)
   end
 
   def update
     @idea.update(idea_params)
-    redirect_to user_ideas_path(current_user)
+    redirect_to user_path(current_user)
   end
 
   def destroy
@@ -32,11 +35,13 @@ class IdeasController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def index
+  end
+
   private
 
     def idea_params
-      params.require(:idea).permit(:body, :category_id, :image_id)
-
+      params.require(:idea).permit(:body, :category_id, :image_ids => [])
     end
 
     def set_idea

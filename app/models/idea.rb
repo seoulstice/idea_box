@@ -5,4 +5,11 @@ class Idea < ApplicationRecord
   has_many :idea_images
   has_many :images, through: :idea_images
 
+  def created_date_and_time
+    created_at.strftime("%D %R")
+  end
+
+  def updated_date_and_time
+    updated_at.strftime("%D %R")
+  end
 end

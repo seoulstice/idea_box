@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     get '/dashboard', to: 'admin#dashboard'
   end
 
+  resources :images, only: [:index]
+
 end

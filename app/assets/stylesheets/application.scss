@@ -19,3 +19,38 @@ body {
       background-repeat: no-repeat;
       font-family: Arial, Helvetica, sans-serif ;
       }
+
+input[type=text] {
+                  // width: 100%;
+                  padding: 3px 5px;
+                  margin: 8px 0;
+                  box-sizing: border-box;
+                  }
+a:link {
+        text-decoration: none;
+       }
+
+a:visited {
+           text-decoration: none;
+          }
+
+.table {
+        border-collapse: collapse;
+        width: 50%;
+        height: 50%;
+        }
+
+.table td, .table th {
+                      border:1px solid #ddd;
+                      padding: 8px;
+                      }
+
+
+
+.table th {
+           padding-top: 12px;
+           padding-bottom: 12px;
+           text-align: left;
+           background-color: #999966;
+           color: white;
+          }
