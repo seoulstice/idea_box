@@ -5,6 +5,7 @@ class IdeasController < ApplicationController
   def new
     @idea = Idea.new
     @categories = Category.order(:classification)
+    @images = Image.order(:name)
   end
 
   def create
