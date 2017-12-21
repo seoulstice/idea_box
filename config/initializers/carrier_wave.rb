@@ -1,1 +1,2 @@
+
 require 'carrierwave/orm/activerecord'

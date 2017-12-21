@@ -44,6 +44,11 @@ a:visited {
       vertical-align: middle;
       }
 
+.root {
+      display: flex;
+      justify-content: space-around;
+      }
+
 .show {
       display: flex;
       flex-direction: column;
