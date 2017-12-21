@@ -15,42 +15,58 @@
  */
 
 body {
-      background-image: url("welcome.jpg");
-      background-repeat: no-repeat;
-      font-family: Arial, Helvetica, sans-serif ;
+      background-image:   url("welcome.jpg");
+      background-repeat:  no-repeat;
+      font-family:        Arial, Helvetica, sans-serif;
       }
 
 input[type=text] {
-                  // width: 100%;
-                  padding: 3px 5px;
-                  margin: 8px 0;
+                  padding:    3px 5px;
+                  margin:     8px 0;
                   box-sizing: border-box;
                   }
 a:link {
         text-decoration: none;
-       }
+        }
 
 a:visited {
            text-decoration: none;
-          }
+           }
+
+.link {
+
+}
+
+.nav {
+      display:          flex;
+      justify-content:  space-between;
+      height: 40px;
+      vertical-align: middle;
+      }
+
+.show {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      }
 
 .table {
-        border-collapse: collapse;
-        width: 50%;
-        height: 50%;
+        border-collapse:  collapse;
+        width:            50%;
+        height:           50%;
         }
 
 .table td, .table th {
-                      border:1px solid #ddd;
-                      padding: 8px;
+                      border:   1px solid #ddd;
+                      padding:  8px;
                       }
 
 
 
 .table th {
-           padding-top: 12px;
-           padding-bottom: 12px;
-           text-align: left;
-           background-color: #999966;
-           color: white;
-          }
+           padding-top:       12px;
+           padding-bottom:    12px;
+           text-align:        left;
+           background-color:  #999966;
+           color:             white;
+           }
