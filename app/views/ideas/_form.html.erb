@@ -4,9 +4,9 @@
     <%= f.text_field :body %>
 
     <%= f.label :category_id %>
-    <%= f.collection_select(:category_id, Category.all, :id, :classification ) %>
+    <%= f.collection_select(:category_id, @categories, :id, :classification ) %>
 
-    <%= f.label :image_ids, "Select an Image" %>
+    <%= f.label :image, "Select an Image" %>
     <%= f.collection_select(:image_ids, Image.all, :id, :name) %>
 
     <%= f.submit %>
