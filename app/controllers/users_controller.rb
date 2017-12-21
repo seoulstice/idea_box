@@ -18,7 +18,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # binding.pry
     @ideas = @user.ideas.order(updated_at: :desc)
   end
 
