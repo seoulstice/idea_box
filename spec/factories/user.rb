@@ -3,6 +3,6 @@ FactoryBot.define do
     name "John"
     email  "JohnDoe@123.com"
     password "123"
-    admin false
+    role 0
   end
 end
