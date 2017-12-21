@@ -8,7 +8,7 @@
 
     <%= f.label :image, "Select an Image" %>
     <%= f.collection_select(:image_ids, @images, :id, :name) %>
-    <%= link_to "View Images", user_ideas_path(current_user) %>
+    <%= link_to "View Images", images_path %>
 
     <%= f.submit %>
 

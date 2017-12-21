@@ -1,0 +1,12 @@
+<div class="">
+  <% @images.each do |image| %>
+    <div class="">
+      <section>
+        <%= image_tag image.image.url unless image.image.url.nil? %>
+      </section>
+      <section>
+        <%= image.name %>
+      </section>
+    </div>
+  <% end %>
+</div>
