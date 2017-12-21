@@ -10,7 +10,7 @@ class IdeasController < ApplicationController
     @idea = @user.ideas.new(idea_params)
     if @idea.save
       flash.now[:success] = "Idea Successfully Created"
-      redirect_to user_path(@user)
+      redirect_to user_path(current_user)
     else
       flash[:failure] = "Idea Not Created"
       render :new
@@ -23,22 +23,20 @@ class IdeasController < ApplicationController
 
   def update
     @idea.update(idea_params)
-    redirect_to user_ideas_path(@idea.user)
+    redirect_to user_ideas_path(current_user)
   end
 
   def destroy
     @idea.destroy
 
-    redirect_to user_ideas_path(@idea.user)
+    redirect_to user_path(current_user)
   end
 
-  def index
-    @ideas = Idea.all
-  end
   private
 
     def idea_params
-      params.require(:idea).permit(:body, :category_id)
+      params.require(:idea).permit(:body, :category_id, :image_id)
+
     end
 
     def set_idea
