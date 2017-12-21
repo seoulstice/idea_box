@@ -20,8 +20,4 @@ class SessionsController < ApplicationController
     redirect_to "/"
   end
 
-  def authenticate()
-
-  end
-
 end
