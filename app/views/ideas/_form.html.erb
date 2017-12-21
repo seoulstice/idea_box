@@ -6,8 +6,8 @@
     <%= f.label :category_id %>
     <%= f.collection_select(:category_id, Category.all, :id, :classification ) %>
 
-    <%= f.label :image %>
-    <%= f.collection_select(:image, Image.all, :id, :name) %>
+    <%= f.label :image_ids, "Select an Image" %>
+    <%= f.collection_select(:image_ids, Image.all, :id, :name) %>
 
     <%= f.submit %>
 
