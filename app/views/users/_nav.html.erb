@@ -1,9 +1,9 @@
-<div class="">
-  <%= link_to "Log Out", logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } if logged_in? %>
-</div>
-<div>
+<div class="link">
   <%= link_to "Admin Dashboard", admin_dashboard_path if current_admin? %>
 </div>
-<div class="">
+<div class="link">
   <%= link_to "Create An Idea", new_user_idea_path(current_user) %>
+</div>
+<div class="link">
+  <%= link_to "Log Out", logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } if logged_in? %>
 </div>
