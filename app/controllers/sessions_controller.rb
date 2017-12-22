@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       @user = User.find_by(email: params[:session][:email].downcase)
       if @user && @user.authenticate(params[:session][:password])
         log_in @user
+        flash[:success] = "You're now logged in, #{@user.name}."
         redirect_to user_path(@user)
       else
         flash[:danger] = "Invalid email/password combination"
@@ -16,8 +17,9 @@ class SessionsController < ApplicationController
     end
 
   def destroy
+    @user = User.find_by(params[:id])
     log_out
+    flash[:log_out] = "You're now logged out, #{@user.name}."
     redirect_to "/"
   end
-
 end

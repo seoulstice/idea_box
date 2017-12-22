@@ -8,9 +8,9 @@
     <%= javascript_include_tag 'application' %>
   </head>
   <body class="<%= params[:controller]%>">
-    <div class="">
+    <div class="flash">
       <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value %></div>
+      <div class="alert-alert-<%= key %>"><%= value %></div>
       <% end %>
     </div>
     <%= yield %>

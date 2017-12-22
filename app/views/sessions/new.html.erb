@@ -1,9 +1,9 @@
-<div class="">
-  <section id="sesion-new-form">
+<div id="session-new">
+  <section id="session-new-left">
     <div>
       <h1>.ideaBox LOG IN</h1>
     </div>
-    <div>
+    <div id="session-new-form">
       <%= form_for(:session, url: login_path) do |f| %>
       <%= f.label :email %>
       <%= f.text_field :email %>
@@ -19,7 +19,7 @@
     </div>
   </section>
   <section>
-    <div id="plant">
+    <div id="session-new-right">
 
     </div>
   </section>

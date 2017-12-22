@@ -27,7 +27,13 @@ body.welcome          {
                       background-image:   url("welcome.jpg");
                       background-repeat:  no-repeat;
                       background-size:    cover;
+                      color:              white;
                       }
+
+body.sessions         {
+                      background-color:   #829191;
+                      }
+
 
 a:link                {
                       text-decoration:    none;
@@ -35,6 +41,11 @@ a:link                {
 
 a:visited             {
                       text-decoration:    none;
+                      }
+
+.flash                {
+                      height:             30px;
+                      width:              250px;
                       }
 
 .nav                  {
@@ -83,8 +94,15 @@ a:visited             {
                       color:              white;
                       align-items:        center;
                       }
+#session-new-left     {
+                      height:             400px;
+                      width:              400px;
+                      display:            flex;
+                      flex-direction:     column;
+                      justify-content:    space-around;
+                      }
 
-#plant                {
+#session-new-right    {
                       height:             400px;
                       width:              400px;
                       background-image:   url("plant.jpeg");
@@ -104,6 +122,15 @@ a:visited             {
                       border-color:       white;
                       }
 
+#session-new          {
+                      display:            flex;
+                      flex-direction:     row;
+                      justify-content:    space-around;
+                      align-self:        center;
+                      }
+
 #session-new-form     {
+                      height: 300px;
+                      width: 300px;
 
                       }
