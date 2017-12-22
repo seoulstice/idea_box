@@ -4,9 +4,6 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem 'fog-aws'
-gem 'carrierwave', '~> 1.0'
-gem 'mini_magick', '~> 4.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -30,6 +27,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'rake'
+gem "factory_bot_rails", "~> 4.0"
+gem 'figaro'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 4.3'
+gem 'fog-aws'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -39,7 +41,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara'
   gem 'database_cleaner'
-  gem "factory_bot_rails", "~> 4.0"
   gem 'launchy'
   gem 'pry'
   gem 'pry-rails', :group => :development
