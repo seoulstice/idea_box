@@ -4,8 +4,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem 'carrierwave', '~> 1.0'
-gem 'mini_magick', '~> 4.3'
+gem 'fog-aws'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -43,9 +42,8 @@ group :development, :test do
   gem 'pry-rails', :group => :development
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'carrierwave', '~> 1.0'
+  gem 'carrierwave', '~> 1.2.1'
   gem 'mini_magick', '~> 4.3'
-  gem 'fog-aws'
   gem 'will_paginate', '~> 3.1.0'
 end
 

@@ -226,7 +226,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   capybara
-  carrierwave (~> 1.0)
+  carrierwave (~> 1.2.1)
   coffee-rails (~> 4.2)
   database_cleaner
   factory_bot_rails (~> 4.0)
