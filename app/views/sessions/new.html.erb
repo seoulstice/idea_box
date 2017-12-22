@@ -1,21 +1,21 @@
 <div id="session-new">
   <section id="session-new-left">
-    <div>
-      <h1>.ideaBox LOG IN</h1>
+    <div id="login-logo-div">
+      <h1 id="login-logo">.ideaBox log in</h1>
     </div>
     <div id="session-new-form">
       <%= form_for(:session, url: login_path) do |f| %>
-      <%= f.label :email %>
+      <%= f.label :email, 'email address' %>
       <%= f.text_field :email %>
 
-      <%= f.label :password %>
+      <%= f.label :password, 'password' %>
       <%= f.password_field :password %>
 
       <%= f.submit "Log In"%>
       <% end %>
-    </div>
-    <div>
-      Need an account? <%= link_to "Create Account", new_user_path %>
+      <div class="">
+        Need an account? <%= link_to "Create Account", new_user_path %>
+      </div>
     </div>
   </section>
   <section>

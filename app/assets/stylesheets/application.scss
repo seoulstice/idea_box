@@ -34,7 +34,11 @@ input[type=password]    {
 
 
 input[type=text]:focus  {
-                        border: 3px solid #555;
+                        border:             3px solid #555;
+                        }
+
+input[type=password]:focus  {
+                        border:             3px solid #555;
                         }
 
 body.welcome            {
@@ -108,6 +112,18 @@ a:visited               {
                         color:              white;
                         align-items:        center;
                         }
+
+#login-logo-div         {
+                        display: flex;
+                        justify-content: space-around;
+                        }
+
+#login-logo             {
+                        color: white;
+                        font-size: 200%;
+}
+
+
 #session-new-left       {
                         height:             400px;
                         width:              400px;
@@ -140,13 +156,12 @@ a:visited               {
                         display:            flex;
                         flex-direction:     row;
                         justify-content:    space-around;
-                        align-self:        center;
+                        align-self:         center;
                         }
 
 #session-new-form       {
-                        height: 300px;
-                        width: 300px;
+                        height:             300px;
+                        width:              300px;
                         display: flex;
-                        flex-direction: column;
-                        flex-wrap: wrap;
+                        flex-direction:  column;
                         }
