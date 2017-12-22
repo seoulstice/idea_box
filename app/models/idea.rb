@@ -5,6 +5,10 @@ class Idea < ApplicationRecord
   has_many :idea_images
   has_many :images, through: :idea_images
 
+  def self.per_page
+    5
+  end
+
   def created_date_and_time
     created_at.strftime("%D %R")
   end
