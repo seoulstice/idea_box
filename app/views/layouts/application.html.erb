@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-  <body>
+  <body class="<%= params[:controller]%>">
     <div class="">
       <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
