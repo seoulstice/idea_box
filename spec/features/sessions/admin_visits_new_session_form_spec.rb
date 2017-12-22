@@ -2,7 +2,10 @@ require "rails_helper"
 
 describe "When Admin User navigates to the new session form" do
   it "the Admin User can sign in with proper credentials" do
-    user = User.create(name: "admin", email: "admin@gmail.com", password: "admin", role: 1)
+    user = User.create(name: "admin",
+                      email: "admin@gmail.com",
+                      password: "admin",
+                      role: 1)
 
     visit login_path
 
