@@ -14,64 +14,154 @@
  *= require_self
  */
 
-body {
-      background-image:   url("welcome.jpg");
-      background-repeat:  no-repeat;
-      font-family:        Arial, Helvetica, sans-serif;
-      }
+body                    {
+                        font-family:        Arial, Helvetica, sans-serif;
+                        }
 
-input[type=text] {
-                  padding:    3px 5px;
-                  margin:     8px 0;
-                  box-sizing: border-box;
-                  }
-a:link {
-        text-decoration: none;
-        }
+input[type=text]        {
+                        padding:            3px 5px;
+                        margin:             8px 0;
+                        box-sizing:         border-box;
+                        outline:            none;
+                        }
 
-a:visited {
-           text-decoration: none;
-           }
+input[type=password]    {
+                        padding:            3px 5px;
+                        margin:             8px 0;
+                        box-sizing:         border-box;
+                        outline:            none;
+                        }
 
-.link {
 
+input[type=text]:focus  {
+                        border:             3px solid #555;
+                        }
+
+input[type=password]:focus  {
+                        border:             3px solid #555;
+                        }
+
+body.welcome            {
+                        background-image:   url("welcome.jpg");
+                        background-repeat:  no-repeat;
+                        background-size:    cover;
+                        color:              white;
+                        }
+
+body.sessions           {
+                        background-color:   #829191;
+                        }
+
+
+a:link                  {
+                        text-decoration:    none;
+                        }
+
+a:visited               {
+                        text-decoration:    none;
+                        }
+
+.flash                  {
+                        height:             30px;
+                        width:              250px;
+                        }
+
+.nav                    {
+                        display:            flex;
+                        justify-content:    space-between;
+                        height:             40px;
+                        vertical-align:     middle;
+                        }
+
+.root                   {
+                        display:            flex;
+                        height:             800px;
+                        justify-content:    space-evenly;
+                        align-items:        center;
+                        }
+
+.show                   {
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-between;
+                        }
+
+.table                  {
+                        border-collapse:    collapse;
+                        width:              50%;
+                        height:             50%;
+                        }
+
+.table td, .table th    {
+                        border:             1px solid #ddd;
+                        padding:            8px;
+                        }
+
+
+
+.table th               {
+                        padding-top:        12px;
+                        padding-bottom:     12px;
+                        text-align:         left;
+                        background-color:   #999966;
+                        color:              white;
+                        }
+
+.welcome-link           {
+                        font-size:          800%;
+                        color:              white;
+                        align-items:        center;
+                        }
+
+#login-logo-div         {
+                        display: flex;
+                        justify-content: space-around;
+                        }
+
+#login-logo             {
+                        color: white;
+                        font-size: 200%;
 }
 
-.nav {
-      display:          flex;
-      justify-content:  space-between;
-      height: 40px;
-      vertical-align: middle;
-      }
 
-.root {
-      display: flex;
-      justify-content: space-around;
-      }
+#session-new-left       {
+                        height:             400px;
+                        width:              400px;
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        }
 
-.show {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      }
+#session-new-right      {
+                        height:             400px;
+                        width:              400px;
+                        background-image:   url("plant.jpeg");
+                        background-repeat:  no-repeat;
+                        background-size:    cover;
+                        }
 
-.table {
-        border-collapse:  collapse;
-        width:            50%;
-        height:           50%;
-        }
+#root-logo              {
+                        height:             200px;
+                        width:              600px;
+                        display:            flex;
+                        align-items:        center;
+                        justify-content:    center;
+                        text-shadow:        3px 3px #2d3635;
+                        border-style:       solid;
+                        border-width:       4px;
+                        border-color:       white;
+                        }
 
-.table td, .table th {
-                      border:   1px solid #ddd;
-                      padding:  8px;
-                      }
+#session-new            {
+                        display:            flex;
+                        flex-direction:     row;
+                        justify-content:    space-around;
+                        align-self:         center;
+                        }
 
-
-
-.table th {
-           padding-top:       12px;
-           padding-bottom:    12px;
-           text-align:        left;
-           background-color:  #999966;
-           color:             white;
-           }
+#session-new-form       {
+                        height:             300px;
+                        width:              300px;
+                        display: flex;
+                        flex-direction:  column;
+                        }

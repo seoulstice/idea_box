@@ -10,10 +10,9 @@ class IdeasController < ApplicationController
 
   def create
     @idea = @user.ideas.new(idea_params)
-
     if @idea.save
       @idea.idea_images.create(image_id: params[:idea][:image_ids].to_i)
-      flash.now[:success] = "Idea Successfully Created"
+      flash[:success] = "Idea Successfully Created"
       redirect_to user_path(current_user)
     else
       flash[:failure] = "Idea Not Created"

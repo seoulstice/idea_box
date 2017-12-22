@@ -1,19 +1,26 @@
-<div class="">
-  <section>
-    <h1>Idea Box Log In</h1>
-  </section>
-  <section>
-    <%= form_for(:session, url: login_path) do |f| %>
-      <%= f.label :email %>
+<div id="session-new">
+  <section id="session-new-left">
+    <div id="login-logo-div">
+      <h1 id="login-logo">.ideaBox log in</h1>
+    </div>
+    <div id="session-new-form">
+      <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.label :email, 'email address' %>
       <%= f.text_field :email %>
 
-      <%= f.label :password %>
-      <%= f.text_field :password %>
+      <%= f.label :password, 'password' %>
+      <%= f.password_field :password %>
 
       <%= f.submit "Log In"%>
-    <% end %>
+      <% end %>
+      <div class="">
+        Need an account? <%= link_to "Create Account", new_user_path %>
+      </div>
+    </div>
   </section>
   <section>
-    Need an account? <%= link_to "Create Account", new_user_path %>
+    <div id="session-new-right">
+
+    </div>
   </section>
 </div>
