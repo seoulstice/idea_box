@@ -11,8 +11,8 @@ describe "When a User visits category new form" do
 
       visit new_admin_category_path
 
-      expect(page).to have_content("Welcome Admin")
       expect(page).to have_field("category[classification]")
       expect(page).to have_button("Create Category")
     end
+  end
 end
