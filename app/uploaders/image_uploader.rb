@@ -29,7 +29,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-
+  require "carrierwave/processing/mini_magick"
   # Create different versions of your uploaded files:
   version :thumb do
     process :resize_to_fit => [100, 100]

@@ -52,10 +52,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
+    carrierwave (1.2.1)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
       mime-types (>= 1.16)
     coderay (1.1.2)
     coffee-rails (4.2.2)
@@ -102,7 +101,6 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    json (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -228,7 +226,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   capybara
-  carrierwave (~> 0.10.0)
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   database_cleaner
   factory_bot_rails (~> 4.0)
