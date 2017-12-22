@@ -36,9 +36,6 @@ class IdeasController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  def index
-  end
-
   private
 
     def idea_params
