@@ -44,6 +44,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'carrierwave', '~> 0.10.0'
   gem 'mini_magick', '~> 4.3'
+  gem 'fog-aws'
 end
 
 group :development do
