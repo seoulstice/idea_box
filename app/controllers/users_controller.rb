@@ -18,7 +18,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @ideas = @user.ideas.order(updated_at: :desc)
+    # @ideas = @user.ideas.order(updated_at: :desc)
+    @ideas = Idea.all.paginate(page: params[:page], per_page: 10)
   end
 
   private
