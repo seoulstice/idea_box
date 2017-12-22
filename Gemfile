@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 gem 'fog-aws'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 4.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -27,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'rake'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,8 +45,6 @@ group :development, :test do
   gem 'pry-rails', :group => :development
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'carrierwave', '~> 1.2.1'
-  gem 'mini_magick', '~> 4.3'
   gem 'will_paginate', '~> 3.1.0'
 end
 

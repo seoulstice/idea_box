@@ -226,7 +226,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   capybara
-  carrierwave (~> 1.2.1)
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   database_cleaner
   factory_bot_rails (~> 4.0)
@@ -240,6 +240,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.7)
   rails (~> 5.1.4)
+  rake
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
