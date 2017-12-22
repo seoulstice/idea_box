@@ -12,8 +12,4 @@ class Idea < ApplicationRecord
   def updated_date_and_time
     updated_at.strftime("%D %R")
   end
-  # 
-  # def create_image_assoc
-  #   idea_images.create(image_id: params[:idea][:image_ids].to_i)
-  # end
 end
