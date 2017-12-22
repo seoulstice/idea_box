@@ -5,6 +5,10 @@ class Idea < ApplicationRecord
   has_many :idea_images
   has_many :images, through: :idea_images
 
+  def self.per_page
+    5
+  end
+
   def created_date_and_time
     created_at.strftime("%D %R")
   end
@@ -12,8 +16,4 @@ class Idea < ApplicationRecord
   def updated_date_and_time
     updated_at.strftime("%D %R")
   end
-  # 
-  # def create_image_assoc
-  #   idea_images.create(image_id: params[:idea][:image_ids].to_i)
-  # end
 end

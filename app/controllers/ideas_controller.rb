@@ -12,10 +12,10 @@ class IdeasController < ApplicationController
     @idea = @user.ideas.new(idea_params)
     if @idea.save
       @idea.idea_images.create(image_id: params[:idea][:image_ids].to_i)
-      flash[:success] = "Idea Successfully Created"
+      flash[:success] = "Idea successfully created."
       redirect_to user_path(current_user)
     else
-      flash[:failure] = "Idea Not Created"
+      flash[:failure] = "Idea not created."
       render :new
     end
   end
@@ -27,6 +27,7 @@ class IdeasController < ApplicationController
 
   def update
     @idea.update(idea_params)
+    flash[:success] = "Idea successfully edited."
     redirect_to user_path(current_user)
   end
 
@@ -34,9 +35,6 @@ class IdeasController < ApplicationController
     @idea.destroy
 
     redirect_to user_path(current_user)
-  end
-
-  def index
   end
 
   private

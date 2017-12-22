@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @ideas = @user.ideas.order(updated_at: :desc)
+    @ideas = Idea.page(params[:page]).order(updated_at: :desc)
   end
 
   private
