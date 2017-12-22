@@ -14,92 +14,96 @@
  *= require_self
  */
 
-body {
-      font-family:        Arial, Helvetica, sans-serif;
-      }
+body                  {
+                      font-family:        Arial, Helvetica, sans-serif;
+                      }
 
-body a:link {
+input[type=text]      {
+                      padding:            3px 5px;
+                      margin:             8px 0;
+                      box-sizing:         border-box;
+                      }
+body.welcome          {
+                      background-image:   url("welcome.jpg");
+                      background-repeat:  no-repeat;
+                      background-size:    cover;
+                      }
 
-            }
+a:link                {
+                      text-decoration:    none;
+                      }
 
-input[type=text] {
-                  padding:    3px 5px;
-                  margin:     8px 0;
-                  box-sizing: border-box;
-                  }
-body.welcome {
-          background-image:   url("welcome.jpg");
-          background-repeat:  no-repeat;
-          background-size:    cover;
-          }
+a:visited             {
+                      text-decoration:    none;
+                      }
 
-a:link {
-        text-decoration: none;
-        }
+.nav                  {
+                      display:            flex;
+                      justify-content:    space-between;
+                      height:             40px;
+                      vertical-align:     middle;
+                      }
 
-a:visited {
-           text-decoration: none;
-           }
+.root                 {
+                      display:            flex;
+                      height:             800px;
+                      justify-content:    space-evenly;
+                      align-items:        center;
+                      }
 
-.link {
+.show                 {
+                      display:            flex;
+                      flex-direction:     column;
+                      justify-content:    space-between;
+                      }
 
-}
+.table                {
+                      border-collapse:    collapse;
+                      width:              50%;
+                      height:             50%;
+                      }
 
-.nav {
-      display:          flex;
-      justify-content:  space-between;
-      height: 40px;
-      vertical-align: middle;
-      }
-
-.root {
-      display: flex;
-      height: 800px;
-      justify-content: space-evenly;
-      align-items: center;
-      }
-
-.show {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      }
-
-.table {
-        border-collapse:  collapse;
-        width:            50%;
-        height:           50%;
-        }
-
-.table td, .table th {
-                      border:   1px solid #ddd;
-                      padding:  8px;
+.table td, .table th  {
+                      border:             1px solid #ddd;
+                      padding:            8px;
                       }
 
 
 
-.table th {
-           padding-top:       12px;
-           padding-bottom:    12px;
-           text-align:        left;
-           background-color:  #999966;
-           color:             white;
-           }
+.table th             {
+                      padding-top:        12px;
+                      padding-bottom:     12px;
+                      text-align:         left;
+                      background-color:   #999966;
+                      color:              white;
+                      }
 
-.welcome-link {
-              font-size: 800%;
-              color:  white;
-              align-items: center;
-              }
+.welcome-link         {
+                      font-size:          800%;
+                      color:              white;
+                      align-items:        center;
+                      }
 
-#root-logo {
-            height: 200px;
-            width: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-shadow: 3px 3px #2d3635;
-            border-style: solid;
-            border-width: 4px;
-            border-color: white;
-            }
+#plant                {
+                      height:             400px;
+                      width:              400px;
+                      background-image:   url("plant.jpeg");
+                      background-repeat:  no-repeat;
+                      background-size:    cover;
+                      }
+
+#root-logo            {
+                      height:             200px;
+                      width:              600px;
+                      display:            flex;
+                      align-items:        center;
+                      justify-content:    center;
+                      text-shadow:        3px 3px #2d3635;
+                      border-style:       solid;
+                      border-width:       4px;
+                      border-color:       white;
+                      }
+
+#session-new-form     {
+
+                      }
