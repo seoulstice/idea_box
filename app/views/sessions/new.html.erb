@@ -1,9 +1,10 @@
 <div class="">
   <section>
-    <h1>Idea Box Log In</h1>
-  </section>
-  <section>
-    <%= form_for(:session, url: login_path) do |f| %>
+    <div>
+      <h1>.ideaBox LOG IN</h1>
+    </div>
+    <div>
+      <%= form_for(:session, url: login_path) do |f| %>
       <%= f.label :email %>
       <%= f.text_field :email %>
 
@@ -11,9 +12,13 @@
       <%= f.text_field :password %>
 
       <%= f.submit "Log In"%>
-    <% end %>
+      <% end %>
+    </div>
+    <div>
+      Need an account? <%= link_to "Create Account", new_user_path %>
+    </div>
   </section>
   <section>
-    Need an account? <%= link_to "Create Account", new_user_path %>
+
   </section>
 </div>

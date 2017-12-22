@@ -89,13 +89,17 @@ a:visited {
 .welcome-link {
               font-size: 800%;
               color:  white;
+              align-items: center;
               }
 
 #root-logo {
-            height: 300px;
+            height: 200px;
             width: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-shadow: 3px 3px #2d3635;
+            border-style: solid;
+            border-width: 4px;
+            border-color: white;
             }
