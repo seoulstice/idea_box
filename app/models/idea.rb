@@ -1,4 +1,5 @@
 class Idea < ApplicationRecord
+  include ActionView::Helpers::DateHelper
   validates :body, presence: true
   belongs_to :user
   belongs_to :category
@@ -9,11 +10,7 @@ class Idea < ApplicationRecord
     5
   end
 
-  def created_date_and_time
-    created_at.strftime("%D %R")
-  end
-
-  def updated_date_and_time
-    updated_at.strftime("%D %R")
+  def time_ago
+    time_ago_in_words(updated_at)
   end
 end

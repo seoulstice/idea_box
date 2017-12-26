@@ -2,6 +2,11 @@ class IdeasController < ApplicationController
   before_action :set_idea, only: [:edit, :update, :destroy]
   before_action :set_user, only: [:new, :create, :edit]
 
+  def searchlight_activerecord
+    @search = IdeaSearch.new(search_params)
+    @ideas = @search.results
+  end
+
   def new
     @idea = Idea.new
     @categories = Category.order(:classification)
@@ -40,7 +45,7 @@ class IdeasController < ApplicationController
   private
 
     def idea_params
-      params.require(:idea).permit(:body, :category_id, :image_ids => [])
+      params.require(:idea).permit(:body, :category_id, :term, :image_ids => [])
     end
 
     def set_idea
@@ -49,5 +54,9 @@ class IdeasController < ApplicationController
 
     def set_user
       @user = User.find(params[:user_id])
+    end
+
+    def search_params
+    (params[:idea_search] || {}).merge(user_id: current_user.id)
     end
 end

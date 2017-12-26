@@ -1,10 +1,13 @@
 <div class="new-idea">
   <%= form_for [current_user, @idea] do |f| %>
     <%= f.label :body %>
-    <%= f.text_field :body %>
+    <%= f.text_field :body, required: true %>
 
     <%= f.label :category_id %>
     <%= f.collection_select(:category_id, @categories, :id, :classification ) %>
+
+    <%= f.label :term, "Goal Type" %>
+    <%= f.select :term, options_for_select([["Short-Term"],["Long-Term"], ["Bucket List"]])%>
 
     <%= f.label :image, "Select an Image" %>
     <%= f.collection_select(:image_ids, @images, :id, :name) %>
