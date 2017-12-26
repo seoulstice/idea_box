@@ -5,6 +5,20 @@
   <div class="nav">
     <%= render partial: "nav" %>
   </div>
+  <div class="searchlight">
+    <%= form_for @search, url: searchlight_activerecord_path do |f| %>
+      <fieldset>
+        <%= f.label     :search_category_id %>
+        <%= f.select :search_category_id, @categories %>
+      </fieldset>
+
+      <fieldset>
+        <%= f.label :search_by_term %>
+        <%= f.select :search_by_term, ["Short-Term", "Long-Term", "Bucket List"] %>
+      </fieldset>
+        <%= f.submit %>
+    <% end %>
+  </div>
   <div class="">
     <% @ideas.each do |idea| %>
       <section>
