@@ -71,6 +71,7 @@ a:visited               {
                         justify-content:    space-between;
                         height:             40px;
                         vertical-align:     middle;
+                        height:             50px;
                         }
 
 .root                   {
@@ -88,23 +89,26 @@ a:visited               {
 
 .table                  {
                         border-collapse:    collapse;
-                        width:              50%;
-                        height:             50%;
+                        width:              100%;
+
                         }
 
 .table td, .table th    {
                         border:             1px solid #ddd;
-                        padding:            8px;
                         }
 
 
 
 .table th               {
-                        padding-top:        12px;
-                        padding-bottom:     12px;
-                        text-align:         left;
+
+                        text-align:         center;
                         background-color:   #999966;
                         color:              white;
+                        }
+
+.user-show-header       {
+                        font-size:          40px;
+                        height:             100px;
                         }
 
 .welcome-link           {
@@ -114,8 +118,8 @@ a:visited               {
                         }
 
 #login-logo-div         {
-                        display: flex;
-                        justify-content: space-around;
+                        display:            flex;
+                        justify-content:    space-around;
                         }
 
 #login-logo             {
@@ -164,6 +168,6 @@ a:visited               {
 #session-new-form       {
                         height:             300px;
                         width:              300px;
-                        display: flex;
-                        flex-direction:  column;
+                        display:            flex;
+                        flex-direction:     column;
                         }
