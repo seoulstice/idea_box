@@ -23,7 +23,7 @@
     <tr>
       <td><%= idea.body %></td>
       <td><%= idea.category.classification %></td>
-      <td><%= idea.created_date_and_time %></td>
+      <td><%= idea.days_ago %></td>
       <td><%= idea.updated_date_and_time %></td>
       <td><% idea.images.each do |image| %>
         <%= image.name %>
