@@ -97,6 +97,14 @@ a:visited               {
                         border:             1px solid #ddd;
                         }
 
+.table tr               {
+
+                        }
+
+.table td               {
+
+                        }
+
 
 
 .table th               {
@@ -170,4 +178,12 @@ a:visited               {
                         width:              300px;
                         display:            flex;
                         flex-direction:     column;
+                        }
+
+#table-header           {
+                        height: 30px;
+                        }
+
+#table-header th        {
+
                         }
