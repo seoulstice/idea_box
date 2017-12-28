@@ -6,25 +6,33 @@
     <%= render partial: "nav" %>
   </div>
   <div class="">
-    <%= form_for(@search, url: user_path) do |f| %>
-      <%= f.label :category %>
-      <%= f.select :category, @categories %>
+    <p>
+    <%= form_for(@search, url: user_path, method: :get) do |f| %>
+      <%= f.label :category, "Goal Category" %>
+      <%= f.select :category, categories_collection, include_blank: true %>
 
-      <%= f.submit %>
+      <%= f.label :term, "Length of Goal" %>
+      <%= f.select :term, term_collection, include_blank: true %>
+
+      <%= f.submit "Search" %>
     <% end %>
   </div>
   <div class="">
-    <% @ideas.each do |idea| %>
+    <% if @ideas.any? %>
       <section>
-        <%= idea.body %>
-        <%= idea.category.classification %>
-        <%= idea.time_ago %>
-        <% idea.images.each do |image| %>
-          <%= image_tag image.image.url unless image.image.url.nil?  %>
+        <% @ideas.each do |idea| %>
+          <%= idea.body %>
+          <%= idea.category.classification %>
+          <%= idea.time_ago %>
+          <% idea.images.each do |image| %>
+            <%= image_tag image.image.url unless image.image.url.nil?  %>
+          <% end %>
+          <%= link_to "Edit", edit_user_idea_path(current_user, idea) %>
+          <%= link_to "Delete", user_idea_path(current_user, idea), method: :delete %>
         <% end %>
-        <%= link_to "Edit", edit_user_idea_path(current_user, idea) %>
-        <%= link_to "Delete", user_idea_path(current_user, idea), method: :delete %>
       </section>
+    <% else %>
+
     <% end %>
   </div>
 </section>
