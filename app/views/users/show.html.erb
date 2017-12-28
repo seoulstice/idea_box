@@ -5,18 +5,10 @@
   <div class="nav">
     <%= render partial: "nav" %>
   </div>
-  <div class="searchlight">
-    <%= form_for @search, url: searchlight_activerecord_path do |f| %>
-      <fieldset>
-        <%= f.label     :search_category_id %>
-        <%= f.select :search_category_id, @categories %>
-      </fieldset>
-
-      <fieldset>
-        <%= f.label :search_by_term %>
-        <%= f.select :search_by_term, ["Short-Term", "Long-Term", "Bucket List"] %>
-      </fieldset>
-        <%= f.submit %>
+  <div class="">
+    <%= form_for @ideas do |f| %>
+      <%= text_field :category %>
+      <%= select_tag :category_id, options_from_collection_for_select(@categories, 'id', 'classification') %>
     <% end %>
   </div>
   <div class="">
@@ -31,7 +23,6 @@
         <%= link_to "Edit", edit_user_idea_path(current_user, idea) %>
         <%= link_to "Edit", edit_user_idea_path(current_user, idea) %>
       </section>
-      <%= will_paginate @ideas %>
     <% end %>
   </div>
 </section>
