@@ -1,10 +1,10 @@
 require "searchlight/adapters/action_view"
 
-class IdeaSearch < Searchlight::Search
+class RecipeSearch < Searchlight::Search
   include Searchlight::Adapters::ActionView
 
   def base_query
-    Idea.includes(:category, :idea_images)
+    Recipe.includes(:category, :recipe_images)
   end
 
   def search_category

@@ -1,11 +1,11 @@
-class IdeasController < ApplicationController
-  before_action :set_idea, only: [:edit, :update, :destroy]
+class RecipesController < ApplicationController
+  before_action :set_recipe, only: [:edit, :update, :destroy]
   before_action :set_user, only: [:new, :create, :edit]
 
   def create
-    @idea = @user.ideas.new(idea_params)
-    if @idea.save
-      @idea.idea_images.create(image_id: params[:idea][:image_ids].to_i)
+    @recipe = @user.recipes.new(recipe_params)
+    if @recipe.save
+      @recipe.recipe_images.create(image_id: params[:recipe][:image_ids].to_i)
       flash[:success] = "Idea successfully created."
       redirect_to user_path(current_user)
     else
@@ -20,31 +20,31 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    @idea.destroy
+    @recipe.destroy
 
     redirect_to user_path(current_user)
   end
 
   def new
-    @idea = Idea.new
+    @recipe = Recipe.new
     @categories = Category.order(:classification)
     @images = Image.order(:name)
   end
 
   def update
-    @idea.update(idea_params)
+    @recipe.update(recipe_params)
     flash[:success] = "Idea successfully edited."
     redirect_to user_path(current_user)
   end
 
   private
 
-    def idea_params
-      params.require(:idea).permit(:body, :category_id, :term, :image_ids => [])
+    def recipe_params
+      params.require(:recipe).permit(:body, :category_id, :term, :image_ids => [])
     end
 
-    def set_idea
-      @idea = Idea.find(params[:id])
+    def set_recipe
+      @recipe = Recipe.find(params[:id])
     end
 
     def set_user

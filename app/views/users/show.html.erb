@@ -20,22 +20,22 @@
     <% end %>
   </div>
   <div class="">
-    <% if @ideas.any?%>
-      <% @ideas.each do |idea| %>
+    <% if @recipes.any?%>
+      <% @recipes.each do |recipe| %>
         <section class="goal-card">
-          <%= idea.body %>
-          <%= idea.category.classification %>
-          <%= idea.time_ago %>
-          <% idea.images.each do |image| %>
+          <%= recipe.body %>
+          <%= recipe.category.classification %>
+          <%= recipe.time_ago %>
+          <% recipe.images.each do |image| %>
             <%= image_tag image.image.url unless image.image.url.nil?  %>
           <% end %>
-          <%= link_to "Edit", edit_user_idea_path(current_user, idea) %>
-          <%= link_to "Delete", user_idea_path(current_user, idea), method: :delete %>
+          <%= link_to "Edit", edit_user_recipe_path(current_user, recipe) %>
+          <%= link_to "Delete", user_recipe_path(current_user, recipe), method: :delete %>
         </section>
       <% end %>
     <% else %>
       <p>No matches.</p>
     <% end %>
-    <%= will_paginate @ideas %>
+    <%= will_paginate @recipes %>
   </div>
 </section>

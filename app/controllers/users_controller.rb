@@ -17,11 +17,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @search = IdeaSearch.new(search_params)
-    @ideas= @search.results.order(updated_at: :desc).paginate(:page => params[:page])
+    @search = RecipeSearch.new(search_params)
+    @recipes = @search.results.order(updated_at: :desc).paginate(:page => params[:page])
     @user = User.find(params[:id])
     @categories = Category.order(:classification)
-    @idea_images = IdeaImage.all
+    @recipe_images = RecipeImage.all
   end
 
   private
@@ -33,6 +33,6 @@ class UsersController < ApplicationController
   protected
 
     def search_params
-      (params[:idea_search] || {}).merge(user_id: current_user.id)
+      (params[:recipe_search] || {}).merge(user_id: current_user.id)
     end
 end

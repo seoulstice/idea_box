@@ -1,5 +1,5 @@
-<div class="new-idea">
-  <%= form_for [current_user, @idea] do |f| %>
+<div class="new-recipe">
+  <%= form_for [current_user, @recipe] do |f| %>
     <%= f.label :body %>
     <%= f.text_field :body, required: true %>
 
