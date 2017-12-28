@@ -14,14 +14,11 @@
       <%= f.label :term, "Sort goals by length of goal" %>
       <%= f.select :term, term_collection, include_blank: true %>
 
-      <%= f.label :body_like %>
-      <%= f.text_field :body_like %>
-
       <%= f.submit "Search" %>
     <% end %>
   </div>
   <div class="">
-
+    <% if @ideas.any?%>
       <% @ideas.each do |idea| %>
         <section>
           <%= idea.body %>
@@ -34,8 +31,9 @@
           <%= link_to "Delete", user_idea_path(current_user, idea), method: :delete %>
         </section>
       <% end %>
-
+    <% else %>
       <p>No matches.</p>
-
+    <% end %>
+    <%= will_paginate @ideas %>
   </div>
 </section>

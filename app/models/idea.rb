@@ -5,7 +5,10 @@ class Idea < ApplicationRecord
   belongs_to :category
   has_many :idea_images, dependent: :nullify
   has_many :images, through: :idea_images
-  scope :body_like, -> (body) { where("ideas.body ILIKE ?", "%#{body}") }
+
+  def self.per_page
+  5
+  end
 
   def time_ago
     time_ago_in_words(updated_at)

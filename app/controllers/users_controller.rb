@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @search = IdeaSearch.new(search_params)
-    @ideas= @search.results.order(updated_at: :desc)
+    @ideas= @search.results.order(updated_at: :desc).paginate(:page => params[:page])
     @user = User.find(params[:id])
     @categories = Category.order(:classification)
     @idea_images = IdeaImage.all
