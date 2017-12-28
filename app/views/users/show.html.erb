@@ -5,13 +5,16 @@
   <div class="nav">
     <%= render partial: "nav" %>
   </div>
-  <div class="">
+  <div class="sort-bar">
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
       <%= f.label :category, "Sort goals by category" %>
       <%= f.select :category, categories_collection, include_blank: true %>
 
-      <%= f.label :term, "Sort goals by length of goal" %>
+      <%= f.label :term, "Sort goals by length" %>
       <%= f.select :term, term_collection, include_blank: true %>
+
+      <%= f.label :body_like %>
+      <%= f.text_field :body_like %>
 
       <%= f.submit "Search" %>
     <% end %>

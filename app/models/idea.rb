@@ -5,6 +5,7 @@ class Idea < ApplicationRecord
   belongs_to :category
   has_many :idea_images, dependent: :nullify
   has_many :images, through: :idea_images
+  scope :body_like, -> (body) { where("ideas.body LIKE ?", "%#{body}%") }
 
   def self.per_page
   5

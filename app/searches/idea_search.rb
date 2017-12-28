@@ -15,4 +15,8 @@ class IdeaSearch < Searchlight::Search
     query.where(term: options[:term])
   end
 
+  def search_body_like
+    query.merge(Idea.body_like(options[:body_like]))
+  end
+
 end
