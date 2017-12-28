@@ -6,10 +6,10 @@ class RecipesController < ApplicationController
     @recipe = @user.recipes.new(recipe_params)
     if @recipe.save
       @recipe.recipe_images.create(image_id: params[:recipe][:image_ids].to_i)
-      flash[:success] = "Idea successfully created."
+      flash[:success] = "Recipe successfully created."
       redirect_to user_path(current_user)
     else
-      flash[:failure] = "Idea not created."
+      flash[:failure] = "Recipe not created."
       render :new
     end
   end
@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
 
   def update
     @recipe.update(recipe_params)
-    flash[:success] = "Idea successfully edited."
+    flash[:success] = "Recipe successfully edited."
     redirect_to user_path(current_user)
   end
 

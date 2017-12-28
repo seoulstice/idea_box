@@ -16,7 +16,7 @@ class RecipeSearch < Searchlight::Search
   end
 
   def search_body_like
-    query.merge(Idea.body_like(options[:body_like]))
+    query.merge(Recipe.body_like(options[:body_like]))
   end
 
 end

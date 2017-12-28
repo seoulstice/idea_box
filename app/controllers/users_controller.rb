@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to Idea Box, #{@user.name}!"
+      flash[:success] = "Welcome to Recipe Box, #{@user.name}!"
       redirect_to user_path(@user)
     else
       flash[:failure] = ""
