@@ -6,7 +6,6 @@
     <%= render partial: "nav" %>
   </div>
   <div class="">
-    <p>
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
       <%= f.label :category, "Sort goals by category" %>
       <%= f.select :category, categories_collection, include_blank: true %>
@@ -20,7 +19,7 @@
   <div class="">
     <% if @ideas.any?%>
       <% @ideas.each do |idea| %>
-        <section>
+        <section class="goal-card">
           <%= idea.body %>
           <%= idea.category.classification %>
           <%= idea.time_ago %>

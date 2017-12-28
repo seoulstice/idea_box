@@ -5,6 +5,6 @@ module CollectionsHelper
   end
 
   def term_collection
-    @term_collection ||= ["Short-Term", "Long-Term", "Bucket-List"]
+    @term_collection ||= ["Short-Term", "Long-Term", "Bucket List"]
   end
 end
