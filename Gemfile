@@ -47,7 +47,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'will_paginate', '~> 3.1.0'
-  gem 'searchlight'
+  gem 'lupa'
 end
 
 group :development do

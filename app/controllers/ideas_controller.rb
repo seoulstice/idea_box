@@ -2,17 +2,6 @@ class IdeasController < ApplicationController
   before_action :set_idea, only: [:edit, :update, :destroy]
   before_action :set_user, only: [:new, :create, :edit]
 
-  def searchlight_activerecord
-    @search = IdeaSearch.new(search_params)
-    @ideas = @search.results
-  end
-
-  def new
-    @idea = Idea.new
-    @categories = Category.order(:classification)
-    @images = Image.order(:name)
-  end
-
   def create
     @idea = @user.ideas.new(idea_params)
     if @idea.save
@@ -30,15 +19,21 @@ class IdeasController < ApplicationController
     @images = Image.order(:name)
   end
 
-  def update
-    @idea.update(idea_params)
-    flash[:success] = "Idea successfully edited."
-    redirect_to user_path(current_user)
-  end
-
   def destroy
     @idea.destroy
 
+    redirect_to user_path(current_user)
+  end
+
+  def new
+    @idea = Idea.new
+    @categories = Category.order(:classification)
+    @images = Image.order(:name)
+  end
+
+  def update
+    @idea.update(idea_params)
+    flash[:success] = "Idea successfully edited."
     redirect_to user_path(current_user)
   end
 
@@ -54,9 +49,5 @@ class IdeasController < ApplicationController
 
     def set_user
       @user = User.find(params[:user_id])
-    end
-
-    def search_params
-    (params[:idea_search] || {}).merge(user_id: current_user.id)
     end
 end

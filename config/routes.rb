@@ -7,10 +7,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  get "/searchlight_activerecord", controller: "ideas", action: "searchlight_activerecord"
-
-  resources :users, only: [:new, :create, :show] do
-    resources :ideas
+  resources :users, only: [:create, :new, :show] do
+    resources :ideas, except: [:show, :index]
   end
 
   namespace :admin do
