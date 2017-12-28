@@ -6,6 +6,10 @@
     <%= render partial: "nav" %>
   </div>
   <div class="">
+    <%= form_for @ideas do |f| %>
+      <%= text_field :category %>
+      <%= select_tag :category_id, options_from_collection_for_select(@categories, 'id', 'classification') %>
+    <% end %>
   </div>
   <div class="">
     <% @ideas.each do |idea| %>

@@ -7,6 +7,6 @@ class IdeaSearch < Lupa::Search
     def term
       scope.where(term: search_attributes[:term])
     end
-    
+
   end
 end
