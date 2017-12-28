@@ -17,8 +17,10 @@ class UsersController < ApplicationController
   end
 
   def show
+    @search = IdeaSearch.new(search_params)
+    @results = @search.results
     @user = User.find(params[:id])
-    @ideas = IdeaSearch.new(current_user.ideas).search(search_params)
+    @ideas = @user.ideas
     @categories = Category.order(:classification)
     @idea_images = IdeaImage.all
   end
@@ -28,9 +30,10 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
+
   protected
 
     def search_params
-      params.permit(:category, :term, created_between: [:start_date, :end_date])
+      (params[:idea_search] || {}).merge(user_id: current_user.id)
     end
 end
