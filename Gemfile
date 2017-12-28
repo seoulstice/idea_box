@@ -48,7 +48,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'will_paginate', '~> 3.1.0'
   gem 'searchlight'
-  gem 'kaminari'
 end
 
 group :development do

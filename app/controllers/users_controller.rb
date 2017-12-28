@@ -20,7 +20,6 @@ class UsersController < ApplicationController
     @search = IdeaSearch.new(search_params)
     @ideas= @search.results
     @user = User.find(params[:id])
-    # @ideas = @user.ideas
     @categories = Category.order(:classification)
     @idea_images = IdeaImage.all
   end
