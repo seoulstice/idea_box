@@ -8,10 +8,10 @@
   <div class="">
     <p>
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
-      <%= f.label :category, "Goal Category" %>
+      <%= f.label :category, "Sort goals by category" %>
       <%= f.select :category, categories_collection, include_blank: true %>
 
-      <%= f.label :term, "Length of Goal" %>
+      <%= f.label :term, "Sort goals by length of goal" %>
       <%= f.select :term, term_collection, include_blank: true %>
 
       <%= f.submit "Search" %>
@@ -19,8 +19,8 @@
   </div>
   <div class="">
     <% if @ideas.any? %>
-      <section>
-        <% @ideas.each do |idea| %>
+      <% @ideas.each do |idea| %>
+        <section>
           <%= idea.body %>
           <%= idea.category.classification %>
           <%= idea.time_ago %>
@@ -29,10 +29,10 @@
           <% end %>
           <%= link_to "Edit", edit_user_idea_path(current_user, idea) %>
           <%= link_to "Delete", user_idea_path(current_user, idea), method: :delete %>
-        <% end %>
-      </section>
+        </section>
+      <% end %>
     <% else %>
-
+      <p>No matches.</p>
     <% end %>
   </div>
 </section>

@@ -15,5 +15,5 @@ class IdeaSearch < Searchlight::Search
     query.where(term: options[:term])
   end
 
-
+  
 end
