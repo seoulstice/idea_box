@@ -1,0 +1,5 @@
+class Restriction < ApplicationRecord
+  
+
+
+end
