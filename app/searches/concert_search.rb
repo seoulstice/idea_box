@@ -11,8 +11,8 @@ class ConcertSearch < Searchlight::Search
     query.where(category: options[:category])
   end
 
-  def search_body_like
-    query.merge(Concert.body_like(options[:body_like]))
+  def search_name_like
+    query.merge(Concert.name_like(options[:name_like]))
   end
 
   def search_purchased

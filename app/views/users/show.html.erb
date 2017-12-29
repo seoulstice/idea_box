@@ -13,8 +13,8 @@
       <%= f.label :purchased %>
       <%= f.select :purchased, [["Yes", true], ["No", false]], include_blank: "---" %>
 
-      <%= f.label :body_like, "Search Concerts by Name" %>
-      <%= f.text_field :body_like %>
+      <%= f.label :name_like, "Search Concerts by Name" %>
+      <%= f.text_field :name_like %>
 
       <%= f.submit "Search" %>
     <% end %>
