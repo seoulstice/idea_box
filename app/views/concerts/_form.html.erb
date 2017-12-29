@@ -3,8 +3,8 @@
     <%= f.label :name %>
     <%= f.text_field :name, required: true %>
 
-    <%= f.label :instruction %>
-    <%= f.text_field :instruction, required: true %>
+    <%= f.label :purchased %>
+    <%= f.check_box :purchased, required: true %>
 
     <%= f.label :category_id %>
     <%= f.collection_select(:category_id, @categories, :id, :classification ) %>

@@ -7,10 +7,10 @@
   </div>
   <div class="sort-bar">
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
-      <%= f.label :category, "Sort Recipes by Meal" %>
+      <%= f.label :category, "Sort Concerts by Genre" %>
       <%= f.select :category, categories_collection, include_blank: true %>
 
-      <%= f.label :body_like, "Search Recipes by Name" %>
+      <%= f.label :body_like, "Search Concerts by Name" %>
       <%= f.text_field :body_like %>
 
       <%= f.submit "Search" %>
@@ -19,7 +19,7 @@
   <div class="">
     <% if @concerts.any?%>
       <% @concerts.each do |concert| %>
-        <section class="goal-card">
+        <section class="concert-card">
           <%= concert.name %>
           <%= concert.category.classification %>
           <%= concert.time_ago %>

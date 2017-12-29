@@ -1,7 +1,7 @@
 class Concert < ApplicationRecord
   include ActionView::Helpers::DateHelper
   validates :name, presence: true
-  validates :instruction, presence: true
+  validates :purchased, presence: true
   belongs_to :user
   belongs_to :category
   has_many :concert_images, dependent: :nullify

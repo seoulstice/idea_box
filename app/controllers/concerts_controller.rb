@@ -40,7 +40,7 @@ class ConcertsController < ApplicationController
   private
 
     def concert_params
-      params.require(:concert).permit(:name, :instruction, :category_id, {:image_ids => []})
+      params.require(:concert).permit(:name, :purchased, :category_id, {:image_ids => []})
     end
 
     def set_concert

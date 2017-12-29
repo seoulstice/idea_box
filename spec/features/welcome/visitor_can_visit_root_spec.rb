@@ -4,6 +4,6 @@ describe 'When a Visitor visits root' do
   it "the Visitor sees the root page" do
     visit "/"
 
-    expect(page).to have_content(".recipeBox")
+    expect(page).to have_content(".concertBox")
   end
 end

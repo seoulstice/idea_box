@@ -10,25 +10,17 @@ User.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-CATEGORIES = ["Breakfast", "Lunch", "Dinner", "Snack"]
+CATEGORIES = ["Rock", "Hip-Hop", "EDM", "DJ", "Pop", "Country"]
 IMAGES = [
-          ["burrito.jpeg", "burrito"],
-          ["curry.jpeg", "curry"],
-          ["hamburger.jpeg", "hamburger"],
-          ["pancakes.jpeg", "pancakes"],
-          ["pizza.jpeg", "pizza"],
-          ["salad.jpg", "salad"],
-          ["salmon.jpg", "salmon"],
-          ["spaghetti.jpg", "spaghetti"],
-          ["steak.jpeg", "steak"]
+
          ]
 
 CATEGORIES.each do |category|
   Category.create!(classification: "#{category}")
 end
 
-IMAGES.each do |image, name|
-  Image.create!(image: File.open(Rails.root + "app/assets/images/food/#{image}"), name: "#{name}")
-end
+# IMAGES.each do |image, name|
+#   Image.create!(image: File.open(Rails.root + "app/assets/images/food/#{image}"), name: "#{name}")
+# end
 
 user = User.create!(password: "admin", email: "admin@gmail.com", role: 1, name: "admin")
