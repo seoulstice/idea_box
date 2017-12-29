@@ -8,7 +8,10 @@
   <div class="sort-bar">
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
       <%= f.label :category, "Sort Concerts by Genre" %>
-      <%= f.select :category, categories_collection, include_blank: true %>
+      <%= f.select :category, categories_collection, include_blank: "All Genres" %>
+
+      <%= f.label :purchased %>
+      <%= f.select :purchased, [["Yes", true], ["No", false]], include_blank: "---" %>
 
       <%= f.label :body_like, "Search Concerts by Name" %>
       <%= f.text_field :body_like %>

@@ -15,4 +15,8 @@ class ConcertSearch < Searchlight::Search
     query.merge(Concert.body_like(options[:body_like]))
   end
 
+  def search_purchased
+    query.where(purchased: checked?(options[:purchased]))
+  end
+
 end
