@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
   def edit
     @categories = Category.order(:classification)
     @images = Image.order(:name)
+    @ingredients = Ingredient.order(:body)
   end
 
   def destroy
