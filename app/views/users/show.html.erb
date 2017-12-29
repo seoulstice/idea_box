@@ -7,10 +7,10 @@
   </div>
   <div class="sort-bar">
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
-      <%= f.label :category, "Sort Recipes by Type" %>
+      <%= f.label :category, "Sort Recipes by Meal" %>
       <%= f.select :category, categories_collection, include_blank: true %>
 
-      <%= f.label :body_like, "Contains text" %>
+      <%= f.label :body_like, "Search Recipes by Name" %>
       <%= f.text_field :body_like %>
 
       <%= f.submit "Search" %>
