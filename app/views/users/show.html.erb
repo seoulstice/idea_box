@@ -10,9 +10,6 @@
       <%= f.label :category, "Sort Recipes by Type" %>
       <%= f.select :category, categories_collection, include_blank: true %>
 
-      <%= f.label :ingredient_ids, "Diet Type" %>
-      <%= f.collection_select(:ingredient_ids, @ingredients, :id, :body,  multiple: true ) %>
-
       <%= f.label :body_like, "Contains text" %>
       <%= f.text_field :body_like %>
 

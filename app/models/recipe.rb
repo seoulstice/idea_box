@@ -5,8 +5,6 @@ class Recipe < ApplicationRecord
   belongs_to :category
   has_many :recipe_images, dependent: :nullify
   has_many :images, through: :recipe_images
-  has_many :recipe_ingredients, dependent: :nullify
-  has_many :ingredients, through: :recipe_ingredients
   scope :body_like, -> (body) { where("recipes.body LIKE ?", "%#{body}%") }
 
   def self.per_page

@@ -21,7 +21,6 @@ class UsersController < ApplicationController
     @recipes = @search.results.order(updated_at: :desc).paginate(:page => params[:page])
     @user = User.find(params[:id])
     @categories = Category.order(:classification)
-    @ingredients = Ingredient.order(:body)
     @recipe_images = RecipeImage.all
   end
 
