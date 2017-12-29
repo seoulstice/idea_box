@@ -29,8 +29,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     @categories = Category.order(:classification)
     @images = Image.order(:name)
-    @restrictions = Restriction.order(:body)
-
+    @ingredients = Ingredient.order(:body)
   end
 
   def update
@@ -42,7 +41,7 @@ class RecipesController < ApplicationController
   private
 
     def recipe_params
-      params.require(:recipe).permit(:body, :category_id, :term, :image_ids => [], :restriction_ids => [])
+      params.require(:recipe).permit(:body, :category_id, :term, {:image_ids => [], :ingredient_ids => []})
     end
 
     def set_recipe

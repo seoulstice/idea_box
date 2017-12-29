@@ -9,13 +9,13 @@ Restriction.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-CATEGORIES = ["Work", "School", "Home", "Hobby", "Financial"]
-RESTRICTIONS = ["Vegan", "Vegetarian", "Keto", "Paleo", "Atkins"]
+CATEGORIES = ["Breakfast", "Lunch", "Dinner", "Snack", ]
+INGREDIENTS = ["Chicken", "Beef", "Tofu", "Lettuce", "Atkins"]
 
 CATEGORIES.each do |category|
   Category.create!(classification: "#{category}")
 end
 
-RESTRICTIONS.each do |restriction|
-  Restriction.create!(body: "#{restriction}")
+INGREDIENTS.each do |ingredient|
+  Ingredient.create!(body: "#{ingredient}")
 end

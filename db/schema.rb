@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171229004724) do
+ActiveRecord::Schema.define(version: 20171229012805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20171229004724) do
     t.string "name"
   end
 
+  create_table "ingredients", force: :cascade do |t|
+    t.string "body"
+  end
+
   create_table "recipe_images", force: :cascade do |t|
     t.bigint "recipe_id"
     t.bigint "image_id"
@@ -35,11 +39,11 @@ ActiveRecord::Schema.define(version: 20171229004724) do
     t.index ["recipe_id"], name: "index_recipe_images_on_recipe_id"
   end
 
-  create_table "recipe_restrictions", force: :cascade do |t|
+  create_table "recipe_ingredients", force: :cascade do |t|
     t.bigint "recipe_id"
-    t.bigint "restriction_id"
-    t.index ["recipe_id"], name: "index_recipe_restrictions_on_recipe_id"
-    t.index ["restriction_id"], name: "index_recipe_restrictions_on_restriction_id"
+    t.bigint "ingredient_id"
+    t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
+    t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -50,10 +54,6 @@ ActiveRecord::Schema.define(version: 20171229004724) do
     t.bigint "category_id"
     t.index ["category_id"], name: "index_recipes_on_category_id"
     t.index ["user_id"], name: "index_recipes_on_user_id"
-  end
-
-  create_table "restrictions", force: :cascade do |t|
-    t.string "body"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(version: 20171229004724) do
 
   add_foreign_key "recipe_images", "images"
   add_foreign_key "recipe_images", "recipes"
-  add_foreign_key "recipe_restrictions", "recipes"
-  add_foreign_key "recipe_restrictions", "restrictions"
+  add_foreign_key "recipe_ingredients", "ingredients"
+  add_foreign_key "recipe_ingredients", "recipes"
   add_foreign_key "recipes", "categories"
   add_foreign_key "recipes", "users"
 end
