@@ -4,7 +4,7 @@
     <%= f.text_field :name, required: true %>
 
     <%= f.label :purchased %>
-    <%= f.check_box :purchased, required: true %>
+    <%= f.check_box :purchased %>
 
     <%= f.label :category_id %>
     <%= f.collection_select(:category_id, @categories, :id, :classification ) %>

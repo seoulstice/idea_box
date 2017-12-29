@@ -2,9 +2,23 @@ class ConcertsController < ApplicationController
   before_action :set_concert, only: [:edit, :update, :destroy]
   before_action :set_user, only: [:new, :create, :edit]
 
+  def new
+    @concert = Concert.new
+    @categories = Category.order(:classification)
+    @images = Image.order(:name)
+  end
+
+  def edit
+    @categories = Category.order(:classification)
+    @images = Image.order(:name)
+  end
+
   def create
+    @categories = Category.order(:classification)
+    @images = Image.order(:name)
     @concert = @user.concerts.new(concert_params)
-    if @concert.save
+    # binding.pry
+    if @concert.save!
       @concert.concert_images.create(image_id: params[:concert][:image_ids].to_i)
       flash[:success] = "Concert successfully created."
       redirect_to user_path(current_user)
@@ -14,26 +28,15 @@ class ConcertsController < ApplicationController
     end
   end
 
-  def edit
-    @categories = Category.order(:classification)
-    @images = Image.order(:name)
+  def update
+    @concert.update(concert_params)
+    flash[:success] = "Concert successfully edited."
+    redirect_to user_path(current_user)
   end
 
   def destroy
     @concert.destroy
 
-    redirect_to user_path(current_user)
-  end
-
-  def new
-    @concert = Concert.new
-    @categories = Category.order(:classification)
-    @images = Image.order(:name)
-  end
-
-  def update
-    @concert.update(concert_params)
-    flash[:success] = "Concert successfully edited."
     redirect_to user_path(current_user)
   end
 
