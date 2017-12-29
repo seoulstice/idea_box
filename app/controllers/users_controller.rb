@@ -25,14 +25,13 @@ class UsersController < ApplicationController
   end
 
   private
-
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
   protected
-
     def search_params
       (params[:recipe_search] || {}).merge(user_id: current_user.id)
     end
+    
 end
