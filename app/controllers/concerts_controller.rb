@@ -8,11 +8,6 @@ class ConcertsController < ApplicationController
     @images = Image.order(:name)
   end
 
-  def edit
-    @categories = Category.order(:classification)
-    @images = Image.order(:name)
-  end
-
   def create
     @categories = Category.order(:classification)
     @images = Image.order(:name)
@@ -28,10 +23,19 @@ class ConcertsController < ApplicationController
     end
   end
 
+  def edit
+    @categories = Category.order(:classification)
+    @images = Image.order(:name)
+  end
+
   def update
     @concert.update(concert_params)
     flash[:success] = "Concert successfully edited."
     redirect_to user_path(current_user)
+  end
+
+  def show
+
   end
 
   def destroy

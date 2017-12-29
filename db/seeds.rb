@@ -10,7 +10,7 @@ User.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-CATEGORIES = ["Rock", "Hip-Hop", "EDM", "DJ", "Pop", "Country"]
+CATEGORIES = ["Rock", "Hip-Hop", "Electronica", "DJ", "Pop", "Jazz", "Blues", "R&B"]
 IMAGES = [
 
          ]

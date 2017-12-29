@@ -22,18 +22,24 @@
   <div class="concert-card-parent">
     <% if @concerts.any?%>
       <% @concerts.each do |concert| %>
-        <section class="concert-card-child">
-          <%= concert.category.classification %>
-          <!-- <%= concert.time_ago %> -->
-          <div class="concert-image">
-            <% concert.images.each do |image| %>
-            <%= image_tag image.image.url unless image.image.url.nil?  %>
-            <% end %>
-          </div>
-          <%= concert.name %>
-          <!-- <%= link_to "Edit", edit_user_concert_path(current_user, concert) %>
-          <%= link_to "Delete", user_concert_path(current_user, concert), method: :delete %> -->
-        </section>
+        <%= link_to user_concert_path(current_user, concert) do %>
+          <section class="concert-card-child">
+            <div class="">
+              <%= concert.category.classification %>
+            </div>
+            <!-- <%= concert.time_ago %> -->
+            <div class="concert-image">
+              <% concert.images.each do |image| %>
+              <%= image_tag image.image.url unless image.image.url.nil?  %>
+              <% end %>
+            </div>
+            <div class="concert-name">
+              <%= concert.name %>
+            </div>
+            <!-- <%= link_to "Edit", edit_user_concert_path(current_user, concert) %>
+            <%= link_to "Delete", user_concert_path(current_user, concert), method: :delete %> -->
+          </section>
+        <% end %>
       <% end %>
     <% else %>
       <p>No matches.</p>
