@@ -5,11 +5,12 @@ class Recipe < ApplicationRecord
   belongs_to :category
   has_many :recipe_images, dependent: :nullify
   has_many :images, through: :recipe_images
+  has_many :recipe_restrictions
   has_many :restrictions, through: :recipe_restrictions
   scope :body_like, -> (body) { where("recipes.body LIKE ?", "%#{body}%") }
 
   def self.per_page
-  5
+    5
   end
 
   def time_ago

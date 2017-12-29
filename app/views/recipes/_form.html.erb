@@ -6,8 +6,8 @@
     <%= f.label :category_id %>
     <%= f.collection_select(:category_id, @categories, :id, :classification ) %>
 
-    <%= f.label :term, "Goal Type" %>
-    <%= f.select :term, options_for_select([["Short-Term"],["Long-Term"], ["Bucket List"]])%>
+    <%= f.label :restriction_ids, "Diet Type" %>
+    <%= f.collection_select(:restriction_ids, @restrictions, :id, :body, {}, multiple: true, include_hidden: false ) %>
 
     <%= f.label :image, "Select an Image" %>
     <%= f.collection_select(:image_ids, @images, :id, :name) %>
