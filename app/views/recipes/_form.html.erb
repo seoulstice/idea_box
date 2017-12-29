@@ -6,9 +6,6 @@
     <%= f.label :category_id %>
     <%= f.collection_select(:category_id, @categories, :id, :classification ) %>
 
-    <%= f.label :ingredient_ids, "Diet Type" %>
-    <%= f.collection_select(:ingredient_ids, @ingredients, :id, :body, {}, multiple: true ) %>
-
     <%= f.label :image, "Select an Image" %>
     <%= f.collection_select(:image_ids, @images, :id, :name) %>
     <%= link_to "View Images", images_path %>

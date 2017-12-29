@@ -4,16 +4,11 @@ class RecipeSearch < Searchlight::Search
   include Searchlight::Adapters::ActionView
 
   def base_query
-    Recipe.includes(:category, :ingredients)
+    Recipe.includes(:category)
   end
 
   def search_category
     query.where(category: options[:category])
-    # binding.pry
-  end
-
-  def search_ingredient_ids
-    query.where(ingredient_ids: options[:ingredient_ids])
   end
 
   def search_body_like
