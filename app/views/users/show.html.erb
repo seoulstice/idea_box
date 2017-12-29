@@ -20,7 +20,7 @@
     <% if @recipes.any?%>
       <% @recipes.each do |recipe| %>
         <section class="goal-card">
-          <%= recipe.body %>
+          <%= recipe.name %>
           <%= recipe.category.classification %>
           <%= recipe.time_ago %>
           <% recipe.images.each do |image| %>
