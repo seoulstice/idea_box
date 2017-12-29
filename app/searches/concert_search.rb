@@ -1,10 +1,10 @@
 require "searchlight/adapters/action_view"
 
-class RecipeSearch < Searchlight::Search
+class ConcertSearch < Searchlight::Search
   include Searchlight::Adapters::ActionView
 
   def base_query
-    Recipe.includes(:category)
+    Concert.includes(:category)
   end
 
   def search_category
@@ -12,7 +12,7 @@ class RecipeSearch < Searchlight::Search
   end
 
   def search_body_like
-    query.merge(Recipe.body_like(options[:body_like]))
+    query.merge(Concert.body_like(options[:body_like]))
   end
 
 end

@@ -1,6 +1,6 @@
 <section class="show">
   <div class="user-show-header">
-    <p><%= current_user.name %>'s Recipe Box</p>
+    <p><%= current_user.name %>'s Concert Box</p>
   </div>
   <div class="nav">
     <%= render partial: "nav" %>
@@ -17,22 +17,22 @@
     <% end %>
   </div>
   <div class="">
-    <% if @recipes.any?%>
-      <% @recipes.each do |recipe| %>
+    <% if @concerts.any?%>
+      <% @concerts.each do |concert| %>
         <section class="goal-card">
-          <%= recipe.name %>
-          <%= recipe.category.classification %>
-          <%= recipe.time_ago %>
-          <% recipe.images.each do |image| %>
+          <%= concert.name %>
+          <%= concert.category.classification %>
+          <%= concert.time_ago %>
+          <% concert.images.each do |image| %>
             <%= image_tag image.image.url unless image.image.url.nil?  %>
           <% end %>
-          <%= link_to "Edit", edit_user_recipe_path(current_user, recipe) %>
-          <%= link_to "Delete", user_recipe_path(current_user, recipe), method: :delete %>
+          <%= link_to "Edit", edit_user_concert_path(current_user, concert) %>
+          <%= link_to "Delete", user_concert_path(current_user, concert), method: :delete %>
         </section>
       <% end %>
     <% else %>
       <p>No matches.</p>
     <% end %>
-    <%= will_paginate @recipes %>
+    <%= will_paginate @concerts %>
   </div>
 </section>
