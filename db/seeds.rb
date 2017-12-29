@@ -31,4 +31,4 @@ IMAGES.each do |image, name|
   Image.create!(image: File.open(Rails.root + "app/assets/images/food/#{image}"), name: "#{name}")
 end
 
-User.create!(password: "admin", email: "admin@gmail.com", role: 1, name: "admin")
+user = User.create!(password: "admin", email: "admin@gmail.com", role: 1, name: "admin")
