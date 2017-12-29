@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to Idea Box, #{@user.name}!"
+      flash[:success] = "Welcome to Recipe Box, #{@user.name}!"
       redirect_to user_path(@user)
     else
       flash[:failure] = ""
@@ -17,10 +17,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    @search = RecipeSearch.new(search_params)
+    @recipes = @search.results.order(updated_at: :desc).paginate(:page => params[:page])
     @user = User.find(params[:id])
-    @ideas = IdeaSearch.new(current_user.ideas).search(search_params)
     @categories = Category.order(:classification)
-    @idea_images = IdeaImage.all
+    @recipe_images = RecipeImage.all
   end
 
   private
@@ -28,9 +29,10 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
+
   protected
 
     def search_params
-      params.permit(:category, :term, created_between: [:start_date, :end_date])
+      (params[:recipe_search] || {}).merge(user_id: current_user.id)
     end
 end
