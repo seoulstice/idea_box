@@ -4,7 +4,7 @@ module CollectionsHelper
     @categories_collection ||= Category.all.map {|cat| [cat.classification, cat.id]}
   end
 
-  def term_collection
-    @term_collection ||= ["Vegan", "Vegetarian", "Paleo", "Gluten-Free"]
+  def ingredients_collection
+    @ingredients_collection ||= Ingredient.all.map { |ingredient| [ingredient.body, ingredient.id]}
   end
 end
