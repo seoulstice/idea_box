@@ -16,6 +16,13 @@
 
 body                    {
                         font-family:        Arial, Helvetica, sans-serif;
+                        height:             100%;
+                        width:              100%;
+                        }
+
+html                    {
+                        height:             100%;
+                        width:              100%;
                         }
 
 input[type=text]        {
@@ -61,6 +68,34 @@ a:visited               {
                         text-decoration:    none;
                         }
 
+.concert-card-child     {
+                        width:              20%;
+                        height:             80%;
+
+                        }
+
+.concert-card-parent    {
+                        display:            flex;
+                        flex-direction:     row;
+                        justify-content:    space-around;
+                        height:             100%;
+                        width:              100%;
+                        }
+.concert-image          {
+                        height:             300px;
+                        width:              300px;
+                        float:              center;
+                        display:            flex;
+                        justify-content:    space-around;
+                        }
+
+
+.concert-image img      {
+                        display:            inline;
+                        float:              none;
+
+                        }
+
 .flash                  {
                         height:             30px;
                         width:              250px;
@@ -85,6 +120,7 @@ a:visited               {
                         display:            flex;
                         flex-direction:     column;
                         justify-content:    space-between;
+                        height:             100%;
                         }
 
 .table                  {

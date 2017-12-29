@@ -19,23 +19,27 @@
       <%= f.submit "Search" %>
     <% end %>
   </div>
-  <div class="">
+  <div class="concert-card-parent">
     <% if @concerts.any?%>
       <% @concerts.each do |concert| %>
-        <section class="concert-card">
-          <%= concert.name %>
+        <section class="concert-card-child">
           <%= concert.category.classification %>
-          <%= concert.time_ago %>
-          <% concert.images.each do |image| %>
+          <!-- <%= concert.time_ago %> -->
+          <div class="concert-image">
+            <% concert.images.each do |image| %>
             <%= image_tag image.image.url unless image.image.url.nil?  %>
-          <% end %>
-          <%= link_to "Edit", edit_user_concert_path(current_user, concert) %>
-          <%= link_to "Delete", user_concert_path(current_user, concert), method: :delete %>
+            <% end %>
+          </div>
+          <%= concert.name %>
+          <!-- <%= link_to "Edit", edit_user_concert_path(current_user, concert) %>
+          <%= link_to "Delete", user_concert_path(current_user, concert), method: :delete %> -->
         </section>
       <% end %>
     <% else %>
       <p>No matches.</p>
     <% end %>
+  </div>
+  <div class="pagination">
     <%= will_paginate @concerts %>
   </div>
 </section>
