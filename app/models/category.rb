@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   validates :classification, presence: true
-  has_many :recipes, dependent: :destroy
+  has_many :concerts, dependent: :destroy
 end

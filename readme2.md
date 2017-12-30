@@ -18,4 +18,4 @@ test:
   database: idea_box_test
 ```
 
-^ The above was indented too much and caused this to fail!!  Crazy.
+^ The above code was indented too much and caused this to fail!!  Crazy.

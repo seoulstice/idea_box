@@ -1,9 +1,13 @@
-<div class="link">
-  <%= link_to "Admin Dashboard", admin_dashboard_path if current_admin? %>
-</div>
-<div class="link">
-  <%= link_to "Create A Recipe", new_user_recipe_path(current_user) %>
-</div>
-<div class="link">
-  <%= link_to "Log Out", logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } if logged_in? %>
-</div>
+
+  <div class="icon-links">
+    <%= link_to image_tag("logos/admin.png"), admin_dashboard_path if current_admin? %>
+    <span class="icon-message">Admin Access</span>
+  </div>
+  <div class="icon-links">
+    <%= link_to image_tag("logos/calendaricon.png"), new_user_concert_path(current_user) %>
+    <span class="icon-message">Set Reminder</span>
+  </div>
+  <div class="icon-links">
+    <%= link_to image_tag("logos/logout.png"), logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } if logged_in? %>
+    <span class="icon-message"><p>Log Out</p></span>
+  </div>

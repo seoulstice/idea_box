@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171229042109) do
+ActiveRecord::Schema.define(version: 20171229214729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,29 +21,30 @@ ActiveRecord::Schema.define(version: 20171229042109) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "images", force: :cascade do |t|
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-  end
-
-  create_table "recipe_images", force: :cascade do |t|
-    t.bigint "recipe_id"
+  create_table "concert_images", force: :cascade do |t|
+    t.bigint "concert_id"
     t.bigint "image_id"
-    t.index ["image_id"], name: "index_recipe_images_on_image_id"
-    t.index ["recipe_id"], name: "index_recipe_images_on_recipe_id"
+    t.index ["concert_id"], name: "index_concert_images_on_concert_id"
+    t.index ["image_id"], name: "index_concert_images_on_image_id"
   end
 
-  create_table "recipes", force: :cascade do |t|
+  create_table "concerts", force: :cascade do |t|
     t.text "name"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id"
-    t.string "instruction"
-    t.index ["category_id"], name: "index_recipes_on_category_id"
-    t.index ["user_id"], name: "index_recipes_on_user_id"
+    t.boolean "purchased"
+    t.datetime "date"
+    t.index ["category_id"], name: "index_concerts_on_category_id"
+    t.index ["user_id"], name: "index_concerts_on_user_id"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -62,8 +63,8 @@ ActiveRecord::Schema.define(version: 20171229042109) do
     t.integer "role", default: 0
   end
 
-  add_foreign_key "recipe_images", "images"
-  add_foreign_key "recipe_images", "recipes"
-  add_foreign_key "recipes", "categories"
-  add_foreign_key "recipes", "users"
+  add_foreign_key "concert_images", "concerts"
+  add_foreign_key "concert_images", "images"
+  add_foreign_key "concerts", "categories"
+  add_foreign_key "concerts", "users"
 end

@@ -1,0 +1,22 @@
+<div class="new-concert">
+  <%= form_for [current_user, @concert] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+
+    <%= f.label :purchased %>
+    <%= f.check_box :purchased %>
+
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+
+    <%= f.label :category_id %>
+    <%= f.collection_select(:category_id, @categories, :id, :classification ) %>
+
+    <%= f.label :image, "Select an Image" %>
+    <%= f.collection_select(:image_ids, @images, :id, :name) %>
+    <%= link_to "View Images", images_path %>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>

@@ -1,38 +1,51 @@
 <section class="show">
   <div class="user-show-header">
-    <p><%= current_user.name %>'s Recipe Box</p>
-  </div>
-  <div class="nav">
-    <%= render partial: "nav" %>
+    <section id="show-logo">
+      ShowBuddy
+    </section>
+    <section id="nav-link">
+      <%= render partial: "nav" %>
+    </section>
   </div>
   <div class="sort-bar">
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
-      <%= f.label :category, "Sort Recipes by Meal" %>
-      <%= f.select :category, categories_collection, include_blank: true %>
+      <%= f.label :category, "Sort Concerts by Genre" %>
+      <%= f.select :category, categories_collection, include_blank: "All Genres" %>
 
-      <%= f.label :body_like, "Search Recipes by Name" %>
-      <%= f.text_field :body_like %>
+      <%= f.label :purchased %>
+      <%= f.select :purchased, [["Yes", true], ["No", false]], include_blank: "---" %>
+
+      <%= f.label :name_like, "Search Concerts by Name" %>
+      <%= f.text_field :name_like %>
 
       <%= f.submit "Search" %>
     <% end %>
   </div>
-  <div class="">
-    <% if @recipes.any?%>
-      <% @recipes.each do |recipe| %>
-        <section class="goal-card">
-          <%= recipe.name %>
-          <%= recipe.category.classification %>
-          <%= recipe.time_ago %>
-          <% recipe.images.each do |image| %>
-            <%= image_tag image.image.url unless image.image.url.nil?  %>
-          <% end %>
-          <%= link_to "Edit", edit_user_recipe_path(current_user, recipe) %>
-          <%= link_to "Delete", user_recipe_path(current_user, recipe), method: :delete %>
-        </section>
+  <div class="concert-card-parent">
+    <% if @concerts.any?%>
+      <% @concerts.each do |concert| %>
+        <%= link_to user_concert_path(current_user, concert) do %>
+          <section class="concert-card-child">
+            <div class="">
+              <%= concert.category.classification %>
+            </div>
+            <!-- <%= concert.time_ago %> -->
+            <div class="concert-image">
+              <% concert.images.each do |image| %>
+              <%= image_tag image.image.url unless image.image.url.nil?  %>
+              <% end %>
+            </div>
+            <div class="concert-name">
+              <%= concert.name %> in <%= concert.time_until %>
+            </div>
+          </section>
+        <% end %>
       <% end %>
     <% else %>
-      <p>No matches.</p>
+      <p id="no-matches">No matches.</p>
     <% end %>
-    <%= will_paginate @recipes %>
+  </div>
+  <div id="pagination">
+    <%= will_paginate @concerts %>
   </div>
 </section>
