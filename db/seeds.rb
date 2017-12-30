@@ -11,16 +11,28 @@ User.destroy_all
 #   Character.create(name: 'Luke', movie: movies.first)
 
 CATEGORIES = ["Rock", "Hip-Hop", "Electronica", "DJ", "Pop", "Jazz", "Blues", "R&B"]
-IMAGES = [
-
+IMAGES = [["alinabaraz.jpg", "Alina Baraz"],
+          ["childishgambino.jpg", "Childish Gambino"],
+          ["djtennis.jpg", "DJ Tennis"],
+          ["drake.jpg", "Drake"],
+          ["fourtet.jpg", "Four Tet"],
+          ["gogopenguin.jpg", "Gogo Penguin"],
+          ["jdilla.jpg", "J Dilla"],
+          ["kendrick.jpg", "Kendrick Lamar"],
+          ["nosaj.jpg", "Nosaj Thing"],
+          ["tashsultana.jpg", "Tash Sultana"],
+          ["tokimonsta.jpg", "TOKiMONSTA"],
+          ["tycho.jpg", "Tycho"],
          ]
 
 CATEGORIES.each do |category|
   Category.create!(classification: "#{category}")
 end
 
-# IMAGES.each do |image, name|
-#   Image.create!(image: File.open(Rails.root + "app/assets/images/food/#{image}"), name: "#{name}")
-# end
+IMAGES.each do |image, name|
+  Image.create!(image: File.open(Rails.root + "app/assets/images/artists/#{image}"), name: "#{name}")
+end
 
 user = User.create!(password: "admin", email: "admin@gmail.com", role: 1, name: "admin")
+
+user2 = User.create!(password: "yjj", email: "yjj@gmail.com", role: 0, name: "young")

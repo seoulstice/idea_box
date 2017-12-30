@@ -3,37 +3,24 @@
 </div>
 <div class="">
   <section>
-    <h3>Categories Index</h3>
+    <h3>Genres Index</h3>
   </section>
-  <table class="table">
-    <tr>
-      <th>Category</th>
-      <th></th>
-    </tr>
-    <% @categories.each do |category| %>
-    <tr>
-      <td><%= category.classification %></td>
-      <td><%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </table>
   <section>
-    <%= link_to "Create Category", new_admin_category_path %>
+    <ul><% @categories.each do |category| %>
+    <li><%= category.classification %>
+    <%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <% end %></ul>
+  </section>
+  <section>
+    <%= link_to "Create Genre", new_admin_category_path %>
   </section>
 </div>
 <div class="">
   <section>
-    <h3>Images Index</h3>
+    <h3>Artist Image Index</h3>
   </section>
-  <table class="table">
-    <tr>
-      <th>Image</th>
-    </tr>
     <% @images.each do |image| %>
-    <tr>
-      <td><%= image_tag image.image.thumb.url unless image.image.thumb.url.nil? %></td>
-    </tr>
+      <%= image_tag image.image.thumb.url unless image.image.thumb.url.nil? %></td>
     <% end %>
-  </table>
   <%= link_to "Create Image", new_admin_image_path %>
 </div>
