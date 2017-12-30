@@ -23,7 +23,7 @@ IMAGES = [["alinabaraz.jpg", "Alina Baraz"],
           ["tashsultana.jpg", "Tash Sultana"],
           ["tokimonsta.jpg", "TOKiMONSTA"],
           ["tycho.jpg", "Tycho"],
-         ]
+          ]
 
 CATEGORIES.each do |category|
   Category.create!(classification: "#{category}")
