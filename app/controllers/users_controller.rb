@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @search = ConcertSearch.new(search_params)
-    @concerts = @search.results.order(updated_at: :desc).paginate(:page => params[:page])
+    @concerts = @search.results.order(:date).paginate(:page => params[:page])
     @user = User.find(params[:id])
     @categories = Category.order(:classification)
     @concert_images = ConcertImage.all
