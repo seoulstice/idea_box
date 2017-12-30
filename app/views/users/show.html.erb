@@ -36,13 +36,13 @@
               <% end %>
             </div>
             <div class="concert-name">
-              <%= concert.name %>
+              <%= concert.name %> in <%= concert.time_until %>
             </div>
           </section>
         <% end %>
       <% end %>
     <% else %>
-      <p>No matches.</p>
+      <p id="no-matches">No matches.</p>
     <% end %>
   </div>
   <div id="pagination">

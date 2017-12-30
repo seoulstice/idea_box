@@ -14,4 +14,8 @@ class Concert < ApplicationRecord
   def time_ago
     time_ago_in_words(updated_at)
   end
+
+  def time_until
+    distance_of_time_in_words(Time.now, date)
+  end
 end
