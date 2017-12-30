@@ -1,5 +1,5 @@
 class ConcertsController < ApplicationController
-  before_action :set_concert, only: [:edit, :update, :destroy]
+  before_action :set_concert, only: [:edit, :update, :destroy, :show]
   before_action :set_user, only: [:new, :create, :edit]
 
   def new

@@ -1,0 +1,17 @@
+<div class="">
+  <section>
+    <%= @concert.name %>
+  </section>
+  <section>
+    <%= @concert.category.classification %>
+  </section>
+  <section>
+    <% @concert.images.each do |image| %>
+      <%= image_tag image.image.url unless image.image.url.nil?  %>
+    <% end %>
+  </section>
+  <section>
+    <%= link_to "Edit", edit_user_concert_path(current_user, @concert) %>
+    <%= link_to "Delete", user_concert_path(current_user, @concert), method: :delete %>
+  </section>
+</div>

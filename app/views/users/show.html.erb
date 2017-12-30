@@ -1,7 +1,7 @@
 <section class="show">
   <div class="user-show-header">
     <section id="show-logo">
-      <p><%= current_user.name %>'s Concert Box</p>
+      ShowBuddy
     </section>
     <section id="nav-link">
       <%= render partial: "nav" %>
@@ -38,8 +38,6 @@
             <div class="concert-name">
               <%= concert.name %>
             </div>
-            <!-- <%= link_to "Edit", edit_user_concert_path(current_user, concert) %>
-            <%= link_to "Delete", user_concert_path(current_user, concert), method: :delete %> -->
           </section>
         <% end %>
       <% end %>

@@ -100,10 +100,32 @@ a:visited               {
                         font-size:          25px;
                         }
 
-
 .flash                  {
-                        height:             30px;
-                        width:              250px;
+                        height:             20px;
+                        width:              100%;
+                        }
+
+.hidden-text            {
+                        display:            none;
+                        }
+.icon-links             {
+                        display:            flex;
+                        flex-direction:     column;
+                        }
+
+
+.icon-links:hover .icon-message {
+                        display:  block;
+                        }
+
+.icon-message          {
+                        border:             1px solid #ccc;
+                        display:            none;
+                        font-size:          12px;
+                        margin-top:         10px;
+                        padding:            3px;
+                        text-align:         center;
+                        text-transform:     uppercase;
                         }
 
 .nav                    {
@@ -113,7 +135,6 @@ a:visited               {
                         vertical-align:     middle;
                         height:             50px;
                         }
-
 
 .root                   {
                         display:            flex;
@@ -132,33 +153,21 @@ a:visited               {
 .table                  {
                         border-collapse:    collapse;
                         width:              100%;
-
                         }
 
 .table td, .table th    {
                         border:             1px solid #ddd;
                         }
 
-.table tr               {
-
-                        }
-
-.table td               {
-
-                        }
-
-
-
 .table th               {
-
                         text-align:         center;
                         background-color:   #999966;
                         color:              white;
                         }
 
 .user-show-header       {
-                        font-size:          60px;
-                        height:             100px;
+                        font-size:          50px;
+                        height:             160px;
                         width:              100%;
                         display:            flex;
                         flex-direction:     row;
@@ -183,12 +192,32 @@ a:visited               {
                         }
 
 #nav-link               {
-                        width:              40%;
                         display:            flex;
                         flex-direction:     row;
-                        font-size:          30px;
-                        justify-content:    space-around;
+                        font-size:          20px;
+                        justify-content:    space-between;
+                        flex-grow:          2;
+                        position:           relative;
+                        float:              left;
+                        width:              100px;
+                        height:              100px;
+                        background-position: 50% 50%;
+                        background-repeat:   no-repeat;
+                        background-size:     cover;
                         }
+
+#nav-link .link         {
+                        text-align:         center;
+                        vertical-align:     middle;
+                        line-height:        200px;
+                        // display:            flex;
+                        // flex-direction:     row;
+                        // font-size:          30px;
+                        // justify-content:    space-around;
+                        // flex-grow:          2;
+                        }
+
+
 
 #pagination             {
                         height:             34px;
@@ -239,7 +268,10 @@ a:visited               {
                         }
 
 #show-logo              {
-                        width:              40%;
+                        text-align:         center;
+                        vertical-align:     middle;
+                        line-height:        200px;
+                        flex-grow:          1;
                         }
 
 #table-header           {
