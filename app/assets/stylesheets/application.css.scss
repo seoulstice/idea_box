@@ -70,7 +70,6 @@ a:visited               {
 
 .concert-card-child     {
                         width:              20%;
-                        height:             80%;
                         flex-direction:     column;
                         display:            flex;
                         justify-content:    space-between;
@@ -81,7 +80,6 @@ a:visited               {
                         display:            flex;
                         flex-direction:     row;
                         justify-content:    space-around;
-                        height:             100%;
                         width:              100%;
                         }
 .concert-image          {
@@ -115,6 +113,7 @@ a:visited               {
                         vertical-align:     middle;
                         height:             50px;
                         }
+
 
 .root                   {
                         display:            flex;
@@ -158,8 +157,12 @@ a:visited               {
                         }
 
 .user-show-header       {
-                        font-size:          40px;
+                        font-size:          60px;
                         height:             100px;
+                        width:              100%;
+                        display:            flex;
+                        flex-direction:     row;
+                        justify-content:    space-between;
                         }
 
 .welcome-link           {
@@ -177,9 +180,33 @@ a:visited               {
                         color:              white;
                         font-size:          200%;
                         text-shadow:        1.5px 1.5px #2d3635;
-
                         }
 
+#nav-link               {
+                        width:              40%;
+                        display:            flex;
+                        flex-direction:     row;
+                        font-size:          30px;
+                        justify-content:    space-around;
+                        }
+
+#pagination             {
+                        height:             34px;
+                        width:              100%;
+                        }
+
+
+#root-logo              {
+                        height:             200px;
+                        width:              600px;
+                        display:            flex;
+                        align-items:        center;
+                        justify-content:    center;
+                        text-shadow:        3px 3px #2d3635;
+                        border-style:       solid;
+                        border-width:       4px;
+                        border-color:       white;
+                        }
 
 #session-new-left       {
                         height:             400px;
@@ -197,18 +224,6 @@ a:visited               {
                         background-size:    cover;
                         }
 
-#root-logo              {
-                        height:             200px;
-                        width:              600px;
-                        display:            flex;
-                        align-items:        center;
-                        justify-content:    center;
-                        text-shadow:        3px 3px #2d3635;
-                        border-style:       solid;
-                        border-width:       4px;
-                        border-color:       white;
-                        }
-
 #session-new            {
                         display:            flex;
                         flex-direction:     row;
@@ -221,6 +236,10 @@ a:visited               {
                         width:              300px;
                         display:            flex;
                         flex-direction:     column;
+                        }
+
+#show-logo              {
+                        width:              40%;
                         }
 
 #table-header           {

@@ -1,9 +1,11 @@
 <section class="show">
   <div class="user-show-header">
-    <p><%= current_user.name %>'s Concert Box</p>
-  </div>
-  <div class="nav">
-    <%= render partial: "nav" %>
+    <section id="show-logo">
+      <p><%= current_user.name %>'s Concert Box</p>
+    </section>
+    <section id="nav-link">
+      <%= render partial: "nav" %>
+    </section>
   </div>
   <div class="sort-bar">
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
@@ -45,7 +47,7 @@
       <p>No matches.</p>
     <% end %>
   </div>
-  <div class="pagination">
+  <div id="pagination">
     <%= will_paginate @concerts %>
   </div>
 </section>
