@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   def destroy
     @user = User.find_by(params[:id])
     log_out
-    flash[:log_out] = "You're now logged out, #{@user.name}."
+    flash[:notice] = "You're now logged out."
     redirect_to "/"
   end
 end

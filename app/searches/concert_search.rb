@@ -6,7 +6,6 @@ class ConcertSearch < Searchlight::Search
   def base_query
     @user = User.find(options[:user_id])
     @user.concerts.includes(:category)
-    # binding.pry
   end
 
   def search_category
@@ -20,7 +19,4 @@ class ConcertSearch < Searchlight::Search
   def search_purchased
     query.where(purchased: checked?(options[:purchased]))
   end
-
-
-
 end
