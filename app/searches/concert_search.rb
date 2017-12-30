@@ -4,7 +4,9 @@ class ConcertSearch < Searchlight::Search
   include Searchlight::Adapters::ActionView
 
   def base_query
-    Concert.includes(:category)
+    @user = User.find(options[:user_id])
+    @user.concerts.includes(:category)
+    # binding.pry
   end
 
   def search_category
@@ -18,5 +20,7 @@ class ConcertSearch < Searchlight::Search
   def search_purchased
     query.where(purchased: checked?(options[:purchased]))
   end
+
+
 
 end
