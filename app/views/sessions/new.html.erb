@@ -1,26 +1,28 @@
-<div id="session-new">
-  <section id="session-new-left">
+<div id="session-new-page">
+  <section id="session-new-box">
     <div id="login-logo-div">
-      <h1 id="login-logo">.concertBox log in</h1>
+      <p class="login-logo-text">concertBox</p>
     </div>
     <div id="session-new-form">
       <%= form_for(:session, url: login_path) do |f| %>
-      <%= f.label :email, 'Email' %>
-      <%= f.text_field :email %>
-
-      <%= f.label :password, 'Password' %>
-      <%= f.password_field :password %>
-
-      <%= f.submit "Log In"%>
+        <section class="session-form-elements">
+          <%= f.label :email, 'Email' %>
+          <%= f.text_field :email %>
+        </section>
+        <section class="session-form-elements">
+          <%= f.label :password, 'Password' %>
+          <%= f.password_field :password %>
+        </section>
+        <section id="session-form-button">
+          <%= f.submit "LOG IN"%>
+        </section>
       <% end %>
-      <div class="">
-        Need an account? <%= link_to "Create Account", new_user_path %>
+      <div class="session-form-elements">
       </div>
-    </div>
-  </section>
-  <section>
-    <div id="session-new-right">
-
+      <div class="session-form-elements">
+        <p>New to concertBox?</p>
+        <%= link_to "Create Account", new_user_path %>
+      </div>
     </div>
   </section>
 </div>
