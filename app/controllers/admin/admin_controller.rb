@@ -1,7 +1,7 @@
 class Admin::AdminController < Admin::BaseController
 
   def dashboard
-    @categories = Category.all
+    @genres = Genre.all
     @images = Image.all
   end
 

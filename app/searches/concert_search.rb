@@ -5,11 +5,11 @@ class ConcertSearch < Searchlight::Search
 
   def base_query
     @user = User.find(options[:user_id])
-    @user.concerts.includes(:category)
+    @user.concerts.includes(:genre)
   end
 
-  def search_category
-    query.where(category: options[:category])
+  def search_genre
+    query.where(genre: options[:genre])
   end
 
   def search_name_like

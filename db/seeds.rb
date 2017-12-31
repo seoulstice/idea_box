@@ -1,4 +1,4 @@
-Category.destroy_all
+Genre.destroy_all
 Image.destroy_all
 User.destroy_all
 
@@ -10,7 +10,7 @@ User.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-CATEGORIES = ["Rock", "Hip-Hop", "Electronica", "DJ", "Pop", "Jazz", "Blues", "R&B"]
+GENRES = ["Rock", "Hip-Hop", "Electronica", "DJ", "Pop", "Jazz", "Blues", "R&B"]
 IMAGES = [["alinabaraz.jpg", "Alina Baraz"],
           ["childishgambino.jpg", "Childish Gambino"],
           ["djtennis.jpg", "DJ Tennis"],
@@ -25,8 +25,8 @@ IMAGES = [["alinabaraz.jpg", "Alina Baraz"],
           ["tycho.jpg", "Tycho"],
           ]
 
-CATEGORIES.each do |category|
-  Category.create!(classification: "#{category}")
+GENRES.each do |genre|
+  Genre.create!(classification: "#{genre}")
 end
 
 IMAGES.each do |image, name|

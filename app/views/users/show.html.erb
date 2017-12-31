@@ -9,8 +9,8 @@
   </div>
   <div class="sort-bar">
     <%= form_for(@search, url: user_path, method: :get) do |f| %>
-      <%= f.label :category, "Sort Concerts by Genre" %>
-      <%= f.select :category, categories_collection, include_blank: "All Genres" %>
+      <%= f.label :genre, "Sort Concerts by Genre" %>
+      <%= f.select :genre, genres_collection, include_blank: "All Genres" %>
 
       <%= f.label :purchased %>
       <%= f.select :purchased, [["Yes", true], ["No", false]], include_blank: "---" %>
@@ -27,7 +27,7 @@
         <%= link_to user_concert_path(current_user, concert) do %>
           <section class="concert-card-child">
             <div class="">
-              <%= concert.category.classification %>
+              <%= concert.genre.classification %>
             </div>
             <!-- <%= concert.time_ago %> -->
             <div class="concert-image">

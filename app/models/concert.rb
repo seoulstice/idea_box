@@ -2,7 +2,7 @@ class Concert < ApplicationRecord
   include ActionView::Helpers::DateHelper
   validates :name, presence: true
   belongs_to :user
-  belongs_to :category
+  belongs_to :genre
   has_many :concert_images, dependent: :nullify
   has_many :images, through: :concert_images
   scope :name_like, -> (name) { where("concerts.name LIKE ?", "%#{name}%") }

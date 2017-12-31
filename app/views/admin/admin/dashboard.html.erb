@@ -6,13 +6,13 @@
     <h3>Genres Index</h3>
   </section>
   <section>
-    <ul><% @categories.each do |category| %>
-    <li><%= category.classification %>
-    <%= link_to "Delete", admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <ul><% @genres.each do |genre| %>
+    <li><%= genre.classification %>
+    <%= link_to "Delete", admin_genre_path(genre), method: :delete, data: { confirm: 'Are you sure?' } %></li>
     <% end %></ul>
   </section>
   <section>
-    <%= link_to "Create Genre", new_admin_category_path %>
+    <%= link_to "Create Genre", new_admin_genre_path %>
   </section>
 </div>
 <div class="">

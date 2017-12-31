@@ -9,8 +9,8 @@
     <%= f.label :date %>
     <%= f.date_field :date, required: true %>
 
-    <%= f.label :category_id %>
-    <%= f.collection_select(:category_id, @categories, :id, :classification ) %>
+    <%= f.label :genre_id %>
+    <%= f.collection_select(:genre_id, @genres, :id, :classification ) %>
 
     <%= f.label :image, "Select an Image" %>
     <%= f.collection_select(:image_ids, @images, :id, :name) %>

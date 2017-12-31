@@ -1,7 +1,7 @@
 module CollectionsHelper
 
-  def categories_collection
-    @categories_collection ||= Category.all.map {|cat| [cat.classification, cat.id]}
+  def genres_collection
+    @genres_collection ||= Genre.all.map {|genre| [genre.classification, genre.id]}
   end
-  
+
 end
