@@ -17,7 +17,7 @@ class Admin::ImagesController < Admin::BaseController
   private
 
     def image_params
-      params.require(:image).permit(:image, :name)
+      params.require(:image).permit(:image, :image_cache :name)
     end
 
 end

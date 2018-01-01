@@ -2,6 +2,8 @@
   <%= form_for [:admin, @image] do |f| %>
     <%= f.label :image %>
     <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+
     <%= f.label :name %>
     <%= f.text_field :name %>
 
