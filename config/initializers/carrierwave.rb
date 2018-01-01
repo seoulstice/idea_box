@@ -12,17 +12,6 @@ CarrierWave.configure do |config|
                             aws_access_key_id:     ENV['AWSAccessKeyId'],
                             aws_secret_access_key: ENV['AWSSecretKey'],
                             }
-  config.fog_directory  = ENV['AWS_BUCKET']
-
-  if Rails.env.test? || Rails.env.cucumber?
-    config.storage = :file
-    config.enable_processing = false
-    config.root = "#{Rails.root}/tmp"
-  else
-    config.storage = :fog
-  end
-
-  # config.cache_dir = "#{Rails.root}/tmp/uploads"
-
   config.fog_directory    = ENV['S3_BUCKET_NAME']
+  config.cache_dir     = "#{Rails.root}/tmp/uploads"
 end
