@@ -36,3 +36,11 @@ end
 user = User.create!(password: "admin", email: "admin@gmail.com", role: 1, name: "admin")
 
 user2 = User.create!(password: "yjj", email: "yjj@gmail.com", role: 0, name: "young")
+
+
+user.concerts.create!(name: "Tash Sultana", user_id: 1, created_at: Time.now, updated_at: Time.now, genre_id: 1, purchased: true, date: Time.now, image_ids: [10] )
+user.concerts.create!(name: "TOKiMONSTA", user_id: 1, created_at: Time.now, updated_at: Time.now, genre_id: 3, purchased: false, date: Time.now, image_ids: [11] )
+user.concerts.create!(name: "Tycho", user_id: 1, created_at: Time.now, updated_at: Time.now, genre_id: 3, purchased: true, date: Time.now, image_ids: [12] )
+user.concerts.create!(name: "Kendrick Lamar", user_id: 1, created_at: Time.now, updated_at: Time.now, genre_id: 2, purchased: true, date: Time.now, image_ids: [8] )
+user.concerts.create!(name: "Alina Baraz", user_id: 1, created_at: Time.now, updated_at: Time.now, genre_id: 5, purchased: true, date: Time.now, image_ids: [1] )
+user.concerts.create!(name: "Childish Gambino", user_id: 1, created_at: Time.now, updated_at: Time.now, genre_id: 2, purchased: true, date: Time.now, image_ids: [2] )
