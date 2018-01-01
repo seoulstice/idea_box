@@ -1,22 +1,30 @@
-<div class="new-concert">
+<div id="session-new-form">
   <%= form_for [current_user, @concert] do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name, required: true, maxlength: 25 %>
+    <section class="session-form-elements">
+      <%= f.label :name, "Event Name" %>
+      <%= f.text_field :name, required: true, maxlength: 25 %>
+    </section>
+    <section class="session-form-elements">
+      <%= f.label :purchased, "Check if Ticket Purchased" %>
+      <%= f.check_box :purchased %>
+    </section>
+    <section class="session-form-elements">
+      <%= f.label :date %>
+      <%= f.date_field :date, required: true %>
+    </section>
+    <section class="session-form-elements">
+      <%= f.label :genre_id %>
+      <%= f.collection_select(:genre_id, @genres, :id, :classification ) %>
+    </section>
+    <section class="session-form-elements">
+      <%= f.label :image, "Select an Image" %>
+      <%= f.collection_select(:image_ids, @images, :id, :name) %>
+      <%= link_to "View Images", images_path %>
+    </section>
+    <section id="concert-form-button">
 
-    <%= f.label :purchased %>
-    <%= f.check_box :purchased %>
-
-    <%= f.label :date %>
-    <%= f.date_field :date, required: true %>
-
-    <%= f.label :genre_id %>
-    <%= f.collection_select(:genre_id, @genres, :id, :classification ) %>
-
-    <%= f.label :image, "Select an Image" %>
-    <%= f.collection_select(:image_ids, @images, :id, :name) %>
-    <%= link_to "View Images", images_path %>
-
-    <%= f.submit %>
+      <%= f.submit %>
+    </section>
 
   <% end %>
 </div>
