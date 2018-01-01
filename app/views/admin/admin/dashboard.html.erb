@@ -4,28 +4,35 @@
 <div id="dashboard-backlink">
   <%= link_to "Back", user_path(current_user) %>
 </div>
-<div class="genres">
-  <section>
-    Genres Index
-  </section>
-  <section>
-    <ul><% @genres.each do |genre| %>
-    <li><%= genre.classification %>
-    <%= link_to "Delete", admin_genre_path(genre), method: :delete, data: { confirm: 'Are you sure?' } %></li>
-    <% end %></ul>
-    <%= will_paginate @genres %>
-  </section>
-  <section>
-    <%= link_to "Create Genre", new_admin_genre_path %>
-  </section>
-</div>
-<div class="">
-  <section>
-    <h3>Artist Image Index</h3>
-  </section>
-    <% @images.each do |image| %>
-      <%= image_tag image.image.thumb.url unless image.image.thumb.url.nil? %></td>
-    <% end %>
-    <%= will_paginate @images %>
-  <%= link_to "Create Image", new_admin_image_path %>
-</div>
+<section id="dashboard-middle">
+  <div class="genres">
+    <section>
+      Genres Index
+    </section>
+    <section>
+      <ul><% @genres.each do |genre| %>
+        <li><%= genre.classification %>
+            <%= link_to "Delete", admin_genre_path(genre), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          <% end %>
+      </ul>
+      <div class="apple_pagination">
+        <%= will_paginate @genres, :param_name => :genres_page %>
+      </div>
+    </section>
+    <section>
+      <%= link_to "Create Genre", new_admin_genre_path %>
+    </section>
+  </div>
+  <div class="images">
+    <section>
+      Artist Image Index
+    </section>
+      <% @images.each do |image| %>
+        <%= image_tag image.image.thumb.url unless image.image.thumb.url.nil? %>
+      <% end %>
+    <div class="apple_pagination">
+      <%= will_paginate @images, :param_name => :images_page %>
+    </div>
+    <%= link_to "Create Image", new_admin_image_path %>
+  </div>
+</section>
