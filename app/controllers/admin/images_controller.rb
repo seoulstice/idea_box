@@ -7,7 +7,7 @@ class Admin::ImagesController < Admin::BaseController
   def create
     @image = Image.new(image_params)
     if @image.save
-      #flash[:success] message goes here
+      flash[:success] = "You've created an image."
       redirect_to admin_dashboard_path
      else
        render :new
