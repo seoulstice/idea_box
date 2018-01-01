@@ -33,7 +33,6 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.3'
 gem 'fog-aws'
 gem 'searchlight'
-gem 'puma'
 
 
 # Use Capistrano for deployment
