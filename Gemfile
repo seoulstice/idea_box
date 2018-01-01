@@ -33,6 +33,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.3'
 gem 'fog-aws'
 gem 'searchlight'
+gem 'will_paginate', '~> 3.1.0'
 
 
 # Use Capistrano for deployment
@@ -48,7 +49,6 @@ group :development, :test do
   gem 'pry-rails', :group => :development
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'will_paginate', '~> 3.1.0'
 end
 
 group :development do
