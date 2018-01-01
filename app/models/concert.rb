@@ -18,4 +18,16 @@ class Concert < ApplicationRecord
   def time_until
     distance_of_time_in_words(Time.now, date)
   end
+
+  def purchased?
+    if purchased == true
+      "Yes"
+    else
+      "No"
+    end
+  end
+
+  def readable_date
+    date.strftime("%A - %B %e, %Y")
+  end
 end

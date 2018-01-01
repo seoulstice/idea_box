@@ -1,17 +1,30 @@
-<div class="">
-  <section>
-    <%= @concert.name %> in <%= @concert.time_until %>
+<div id="concert-show">
+  <section id="back-button">
+    <%= link_to "Back", user_path(current_user) %>
   </section>
-  <section>
-    <%= @concert.genre.classification %>
-  </section>
-  <section>
-    <% @concert.images.each do |image| %>
+  <section id="concert-show-card">
+    <div id="concert-info">
+      <section>
+        <%= @concert.name %> in <%= @concert.time_until %>
+      </section>
+      <section>
+        Genre : <%= @concert.genre.classification %>
+      </section>
+      <section>
+        Ticket Purchased? <%= @concert.purchased? %>
+      </section>
+    </div>
+    <div>
+      <% @concert.images.each do |image| %>
       <%= image_tag image.image.url unless image.image.url.nil?  %>
-    <% end %>
-  </section>
-  <section>
-    <%= link_to "Edit", edit_user_concert_path(current_user, @concert) %>
-    <%= link_to "Delete", user_concert_path(current_user, @concert), method: :delete %>
+      <% end %>
+    </div>
+    <div id="date">
+      <%= @concert.readable_date %>
+    </div>
+    <div id="concert-show-buttons" >
+      <%= link_to "Edit", edit_user_concert_path(current_user, @concert) %>
+      <%= link_to "Delete", user_concert_path(current_user, @concert), method: :delete %>
+    </div>
   </section>
 </div>

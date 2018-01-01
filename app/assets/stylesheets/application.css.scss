@@ -63,38 +63,43 @@ p                       {
                         height:             auto;
                         }
 
-.apple_pagination       {
-                        text-align: center;
-                        padding: 1em;
-                        cursor: default;
-}
+.admin-text             {
+                        font-size:          20px;
+                        }
 
-.apple_pagination a, .apple_pagination span {
-                        padding: 0.2em 0.3em;
-}
+.apple_pagination       {
+                        text-align:         center;
+                        padding:            1em;
+                        cursor:             default;
+                        }
+
+.apple_pagination a, .apple_pagination span
+                        {
+                        padding:            0.2em 0.3em;
+                        }
 
 .apple_pagination .disabled
                         {
-                        color: #aaaaaa;
+                        color:              #aaaaaa;
                         }
 
 .apple_pagination .current {
-                        font-style: normal;
-                        font-weight: bold;
-                        background-color: #bebebe;
-                        display: inline-block;
-                        width: 1.4em;
-                        height: 1.4em;
-                        line-height: 1.5;
+                        font-style:         normal;
+                        font-weight:        bold;
+                        background-color:   #bebebe;
+                        display:            inline-block;
+                        width:              1.4em;
+                        height:             1.4em;
+                        line-height:        1.5;
                         -moz-border-radius: 1em;
                         -webkit-border-radius: 1em;
-                        border-radius: 1em;
-                        text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+                        border-radius:      1em;
+                        text-shadow:        rgba(255, 255, 255, 0.8) 1px 1px 1px;
                         }
 
 .apple_pagination a     {
-                        text-decoration: none;
-                        color: white;
+                        text-decoration:    none;
+                        color:              white;
                         }
 
 .apple_pagination a:hover, .apple_pagination a:focus, .apple_pagination a:visited
@@ -154,9 +159,20 @@ p                       {
                         flex-direction:     column;
                         width:              350px;
                         height:             350px;
-                        justify-content:  center;
-                        align-items:      center;
-                        background-color: white;
+                        justify-content:    center;
+                        align-items:        center;
+                        background-color:   black;
+                        border-radius:      10px;
+                        border:             2px solid white;
+                        color:              white;
+                        }
+
+.genres a               {
+                        color:              grey;
+                        }
+
+.genres a:hover         {
+                        text-decoration:    underline;
                         }
 
 .hidden-text            {
@@ -175,16 +191,23 @@ p                       {
 
 .images                 {
                         align-self:         center;
+                        color:              white;
                         background-color:   black;
                         text-align:         center;
+                        height:             200px;
                         width:              600px;
                         border-radius:      10px;
                         border:             2px solid white;
                         }
 
 .images a               {
-                        color:              white;
+                        color:              grey;
                         }
+
+.images a:hover         {
+                        text-decoration:    underline;
+                        }
+
 
 .login-logo             {
                         color:              white;
@@ -246,18 +269,10 @@ p                       {
                         margin-left:        20px;
                         }
 
-
 .session-form-elements p
                         {
                         margin-left:        20px;
                         }
-
-// .session-form-elements select
-//                         {
-//                         margin-right:        20px;
-//                         }
-
-
 
 .session-form-elements a:visited
                         {
@@ -292,12 +307,6 @@ p                       {
                         color:              white;
                         }
 
-.tooltip                {
-                        // position: relative;
-                        // display: inline-block;
-
-                        }
-
 .tooltip .tooltiptext   {
                         visibility: hidden;
                         width: 100px;
@@ -330,6 +339,24 @@ p                       {
                         align-items:        center;
                         }
 
+#back-button            {
+                        height:             50px;
+                        width:              50px;
+                        background-color:   black;
+                        text-align:         center;
+                        color:              white;
+                        border:             2px solid white;
+                        border-radius:      10px;
+                        display:            flex;
+                        align-items:        center;
+                        justify-content:    space-around;
+                        }
+
+#back-button a:visited  {
+                        color:              white;
+                        }
+
+
 #concert-form-button    {
                         width:              400px;
                         height:             50px;
@@ -352,6 +379,14 @@ p                       {
                         display:            flex;
                         justify-content:    space-around;
                         align-items:        center;
+                        }
+
+#concert-info           {
+                        color:              white;
+                        display:            flex;
+                        flex-direction:     column;
+                        font-size:          20px;
+                        padding-top:        10px;
                         }
 
 #concert-new            {
@@ -381,13 +416,68 @@ p                       {
                         border:             2px solid white;
                         }
 
+#concert-show           {
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        height:             100%;
+                        width:              100%;
+                        }
+
+#concert-show-card      {
+                        height:             500px;
+                        width:              400px;
+                        background-color:   black;
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-between;
+                        align-items:        center;
+}
+
+#concert-show-buttons   {
+                        display:            flex;
+                        flex-direction:     row;
+                        justify-content:    space-around;
+                        width:              400px;
+                        padding-bottom:     10px;
+                        }
+
+#concert-show-buttons a
+                        {
+                        height:             30px;
+                        width:              50px;
+                        background-color:   white;
+                        text-align:         center;
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        border-radius:      5px;
+                        font-weight:        bold;
+                        }
+
 #dashboard-backlink     {
                         display:            flex;
                         align-items:        center;
                         flex-direction:     column;
                         height:             50px;
                         justify-content:    space-around;
+
+
                         }
+
+#dashboard-backlink a   {
+                        height:             40px;
+                        width:              50px;
+                        text-align:         center;
+                        color:              white;
+                        background-color:   black;
+                        border-radius:      10px;
+                        border:             2px solid white;
+                        padding-top:        15px;
+                        }
+
+
 
 #dashboard-header       {
                         text-align:         center;
@@ -404,6 +494,9 @@ p                       {
                         justify-content:    center;
                         }
 
+#date                   {
+                        color:              white;
+                        }
 
 #genre                  {
                         margin-left:        20px;
