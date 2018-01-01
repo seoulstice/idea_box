@@ -20,7 +20,7 @@ IMAGES = [["alinabaraz.jpg", "Alina Baraz"],
           ["jdilla.jpg", "J Dilla"],
           ["kendrick.jpg", "Kendrick Lamar"],
           ["nosaj.jpg", "Nosaj Thing"],
-          ["tashsultana.jpg", "Tash Sultana"],
+          ["tashsultana.jpeg", "Tash Sultana"],
           ["tokimonsta.jpg", "TOKiMONSTA"],
           ["tycho.jpg", "Tycho"],
           ]
