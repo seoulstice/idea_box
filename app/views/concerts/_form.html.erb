@@ -1,7 +1,7 @@
 <div class="new-concert">
   <%= form_for [current_user, @concert] do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name, required: true %>
+    <%= f.text_field :name, required: true, maxlength: 25 %>
 
     <%= f.label :purchased %>
     <%= f.check_box :purchased %>

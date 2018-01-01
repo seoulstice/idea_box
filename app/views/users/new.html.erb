@@ -1,21 +1,32 @@
-<div class="">
-  <h1>Create a Concert Box Account</h1>
-</div>
-<div class="">
-  <%= form_for @user do |f|  %>
-    <%=  f.label :name %>
-    <%= f.text_field :name %>
-
-    <%=  f.label :email %>
-    <%= f.email_field :email %>
-
-    <%=  f.label :password %>
-    <%= f.password_field :password %>
-
-    <%=  f.label :password_confirmation, "Confirm Password" %>
-    <%= f.password_field :password_confirmation %>
-
-    <%= f.submit %>
-
-  <% end %>
+<div id="session-new-page">
+  <section id="session-new-box">
+    <div id="login-logo-div">
+      <p id="session-logo-text">New Account</p>
+    </div>
+    <div id="session-new-form">
+      <%= form_for @user do |f|  %>
+      <section class="session-form-elements">
+        <%=  f.label :name %>
+        <%= f.text_field :name %>
+      </section>
+      <section class="session-form-elements">
+        <%=  f.label :email %>
+        <%= f.email_field :email %>
+      </section>
+      <section class="session-form-elements">
+        <%=  f.label :password %>
+        <%= f.password_field :password %>
+      </section>
+      <section class="session-form-elements">
+        <%=  f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation %>
+      </section>
+      <section id="user-form-button">
+        <%= link_to "Back", login_path %>
+        <%= submit_tag("Reset Form", { :name => 'reset', :id => 'reset_button', :type => "reset" }) %>
+        <%= f.submit "Create" %>
+      </section>
+      <% end %>
+    </div>
+  </section>
 </div>
