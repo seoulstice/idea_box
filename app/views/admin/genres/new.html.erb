@@ -1,6 +1,13 @@
-<div class="">
-  <h1>Create Genre</h1>
-</div>
-<div class="">
-  <%= render partial: "form" %>
+<div id="new-genre-page">
+  <section id="dashboard-backlink">
+    <%= link_to "Back", admin_dashboard_path %>
+  </section>
+  <section id="new-genre-box">
+    <div id="new-genre-text">
+      <p>Create a Genre</p>
+    </div>
+    <div id="new-genre-form">
+      <%= render partial: "form" %>
+    </div>
+  </section>
 </div>
