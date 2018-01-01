@@ -542,6 +542,11 @@ p                       {
                         justify-content:    space-between;
                         }
 
+#image-index            {
+                        display:            flex;
+                        flex-direction:     column;
+                        }
+
 #login-logo-div         {
                         display:            flex;
                         justify-content: space-around;
