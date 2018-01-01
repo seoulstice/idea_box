@@ -1,8 +1,8 @@
 class Concert < ApplicationRecord
   include ActionView::Helpers::DateHelper
-  validates :name, presence: true
+  validates :name, presence: true, length: { in: 0..25 }
   belongs_to :user
-  belongs_to :category
+  belongs_to :genre
   has_many :concert_images, dependent: :nullify
   has_many :images, through: :concert_images
   scope :name_like, -> (name) { where("concerts.name LIKE ?", "%#{name}%") }
@@ -17,5 +17,17 @@ class Concert < ApplicationRecord
 
   def time_until
     distance_of_time_in_words(Time.now, date)
+  end
+
+  def purchased?
+    if purchased == true
+      "Yes"
+    else
+      "No"
+    end
+  end
+
+  def readable_date
+    date.strftime("%A - %B %e, %Y")
   end
 end

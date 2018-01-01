@@ -1,42 +1,46 @@
 <section class="show">
-  <div class="user-show-header">
-    <section id="show-logo">
-      ShowBuddy
+  <div id="header">
+    <section class="user-show-header">
+      <section id="show-logo">
+        <p>concertBox</p>
+      </section>
+      <section id="nav-link">
+        <%= render partial: "nav" %>
+      </section>
     </section>
-    <section id="nav-link">
-      <%= render partial: "nav" %>
-    </section>
-  </div>
-  <div class="sort-bar">
-    <%= form_for(@search, url: user_path, method: :get) do |f| %>
-      <%= f.label :category, "Sort Concerts by Genre" %>
-      <%= f.select :category, categories_collection, include_blank: "All Genres" %>
+    <section class="sort-bar">
+      <%= form_for(@search, url: user_path, method: :get) do |f| %>
+      <%= f.label :genre, "Sort Concerts by Genre" %>
+      <%= f.select :genre, genres_collection, include_blank: "All Genres" %>
 
-      <%= f.label :purchased %>
+      <%= f.label :purchased, "Tickets Purchased?" %>
       <%= f.select :purchased, [["Yes", true], ["No", false]], include_blank: "---" %>
 
       <%= f.label :name_like, "Search Concerts by Name" %>
       <%= f.text_field :name_like %>
 
+      <%= submit_tag("Reset Form", { :name => 'reset', :id => 'reset_button', :type => "reset" }) %>
       <%= f.submit "Search" %>
-    <% end %>
+      <% end %>
+    </section>
   </div>
   <div class="concert-card-parent">
     <% if @concerts.any?%>
       <% @concerts.each do |concert| %>
         <%= link_to user_concert_path(current_user, concert) do %>
           <section class="concert-card-child">
-            <div class="">
-              <%= concert.category.classification %>
+            <div id="genre">
+              <%= concert.genre.classification %>
             </div>
-            <!-- <%= concert.time_ago %> -->
             <div class="concert-image">
               <% concert.images.each do |image| %>
               <%= image_tag image.image.url unless image.image.url.nil?  %>
               <% end %>
             </div>
             <div class="concert-name">
-              <%= concert.name %> in <%= concert.time_until %>
+              <%= concert.name %>
+              <p>in</p>
+              <%= concert.time_until %>
             </div>
           </section>
         <% end %>
@@ -45,7 +49,7 @@
       <p id="no-matches">No matches.</p>
     <% end %>
   </div>
-  <div id="pagination">
+  <div class="apple_pagination">
     <%= will_paginate @concerts %>
   </div>
 </section>

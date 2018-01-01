@@ -16,8 +16,11 @@
 
 body                    {
                         font-family:        Arial, Helvetica, sans-serif;
-                        height:             95%;
-                        width:              98%;
+                        height:             100%;
+                        width:              100%;
+                        background-image:   url("welcome.jpg");
+                        background-repeat:  no-repeat;
+                        background-size:    cover;
                         }
 
 html                    {
@@ -48,18 +51,6 @@ input[type=password]:focus  {
                         border:             3px solid #555;
                         }
 
-body.welcome            {
-                        background-image:   url("welcome.jpg");
-                        background-repeat:  no-repeat;
-                        background-size:    cover;
-                        color:              white;
-                        }
-
-body.sessions           {
-                        background-color:   #829191;
-                        }
-
-
 a:link                  {
                         text-decoration:    none;
                         }
@@ -68,12 +59,64 @@ a:visited               {
                         text-decoration:    none;
                         }
 
-.concert-card-child     {
-                        width:              20%;
-                        flex-direction:     column;
-                        display:            flex;
-                        justify-content:    space-between;
+p                       {
+                        height:             auto;
+                        }
 
+.admin-text             {
+                        font-size:          20px;
+                        }
+
+.apple_pagination       {
+                        text-align:         center;
+                        padding:            1em;
+                        cursor:             default;
+                        }
+
+.apple_pagination a, .apple_pagination span
+                        {
+                        padding:            0.2em 0.3em;
+                        }
+
+.apple_pagination .disabled
+                        {
+                        color:              #aaaaaa;
+                        }
+
+.apple_pagination .current {
+                        font-style:         normal;
+                        font-weight:        bold;
+                        background-color:   #bebebe;
+                        display:            inline-block;
+                        width:              1.4em;
+                        height:             1.4em;
+                        line-height:        1.5;
+                        -moz-border-radius: 1em;
+                        -webkit-border-radius: 1em;
+                        border-radius:      1em;
+                        text-shadow:        rgba(255, 255, 255, 0.8) 1px 1px 1px;
+                        }
+
+.apple_pagination a     {
+                        text-decoration:    none;
+                        color:              white;
+                        }
+
+.apple_pagination a:hover, .apple_pagination a:focus, .apple_pagination a:visited
+                        {
+                        text-decoration:    underline;
+                        color:              white;
+                        }
+
+.concert-card-child     {
+                        height:             400px;
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-between;
+                        background-color:   grey;
+                        border-radius:      10px;
+                        border:             3px solid white;
+                        color:              white;
                         }
 
 .concert-card-parent    {
@@ -81,7 +124,7 @@ a:visited               {
                         flex-direction:     row;
                         justify-content:    space-around;
                         width:              100%;
-                        height:             400px;
+                        height:             350px;
                         }
 
 .concert-image          {
@@ -98,8 +141,12 @@ a:visited               {
 
 .concert-name           {
                         width:              300px;
-                        height:             70px;
-                        font-size:          25px;
+                        font-size:          15px;
+                        font-weight:        bold;
+                        display:            flex;
+                        flex-direction:     column;
+                        align-items:        center;
+                        justify-content:    space-around;
                         }
 
 .flash                  {
@@ -107,17 +154,29 @@ a:visited               {
                         width:              100%;
                         }
 
-.hidden-text            {
-                        display:            none;
-                        }
-.icon-links             {
+.genres                 {
                         display:            flex;
                         flex-direction:     column;
+                        width:              350px;
+                        height:             350px;
+                        justify-content:    center;
+                        align-items:        center;
+                        background-color:   black;
+                        border-radius:      10px;
+                        border:             2px solid white;
+                        color:              white;
                         }
 
+.genres a               {
+                        color:              grey;
+                        }
 
-.icon-links:hover .icon-message {
-                        display:  block;
+.genres a:hover         {
+                        text-decoration:    underline;
+                        }
+
+.hidden-text            {
+                        display:            none;
                         }
 
 .icon-message          {
@@ -129,6 +188,39 @@ a:visited               {
                         text-align:         center;
                         text-transform:     uppercase;
                         }
+
+.images                 {
+                        align-self:         center;
+                        color:              white;
+                        background-color:   black;
+                        text-align:         center;
+                        height:             200px;
+                        width:              600px;
+                        border-radius:      10px;
+                        border:             2px solid white;
+                        }
+
+.images a               {
+                        color:              grey;
+                        }
+
+.images a:hover         {
+                        text-decoration:    underline;
+                        }
+
+
+.login-logo             {
+                        color:              white;
+                        text-shadow:        1.5px 1.5px #2d3635;
+                        }
+
+.login-logo-text        {
+                        font-size:          60px;
+                        color:              white;
+                        width:              320px;
+                        text-shadow:        2px 2px black;
+                        }
+
 
 .nav                    {
                         display:            flex;
@@ -145,11 +237,59 @@ a:visited               {
                         align-items:        center;
                         }
 
+.session-form-elements  {
+                        display:            flex;
+                        height:             50px;
+                        width:              400px;
+                        justify-content:    space-between;
+                        align-items:        center;
+                        font-size:          18px;
+                        color:              black;
+                        }
+
+.session-form-elements input, select
+                        {
+                        margin-right:       20px;
+                        border:             2px solid grey;
+                        }
+
+.session-form-elements a
+                        {
+                        margin-right:       20px;
+                        font-size:          15px;
+                        }
+
+.session-form-elements a:hover
+                        {
+                        text-decoration:  underline;
+                        }
+
+.session-form-elements label
+                        {
+                        margin-left:        20px;
+                        }
+
+.session-form-elements p
+                        {
+                        margin-left:        20px;
+                        }
+
+.session-form-elements a:visited
+                        {
+                        color:              white;
+                        }
+
 .show                   {
                         display:            flex;
                         flex-direction:     column;
-                        justify-content:    space-between;
+                        justify-content:    space-around;
                         height:             100%;
+                        width:              100%;
+                        }
+
+.sort-bar               {
+                        margin-left:        30px;
+                        font-weight:        bold;
                         }
 
 .table                  {
@@ -167,10 +307,27 @@ a:visited               {
                         color:              white;
                         }
 
+.tooltip .tooltiptext   {
+                        visibility: hidden;
+                        width: 100px;
+                        font-size: 20px;
+                        background-color: black;
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 6px;
+                        padding: 5px 0;
+                        position: absolute;
+                        z-index: 1;
+                        }
+
+.tooltip:hover .tooltiptext {
+                        visibility: visible;
+                        }
+
 .user-show-header       {
-                        font-size:          50px;
+                        font-size:          60px;
                         height:             160px;
-                        width:              100%;
+
                         display:            flex;
                         flex-direction:     row;
                         justify-content:    space-between;
@@ -182,41 +339,218 @@ a:visited               {
                         align-items:        center;
                         }
 
-#login-logo-div         {
+#back-button            {
+                        height:             50px;
+                        width:              50px;
+                        background-color:   black;
+                        text-align:         center;
+                        color:              white;
+                        border:             2px solid white;
+                        border-radius:      10px;
                         display:            flex;
+                        align-items:        center;
                         justify-content:    space-around;
                         }
 
-#login-logo             {
+#back-button a:visited  {
                         color:              white;
-                        font-size:          200%;
-                        text-shadow:        1.5px 1.5px #2d3635;
                         }
+
+
+#concert-form-button    {
+                        width:              400px;
+                        height:             50px;
+                        display:            flex;
+                        flex-direction:     column;
+                        align-items:        center;
+                        justify-content:    space-around;
+                        }
+
+#concert-form-button input
+                        {
+                        height:             50px;
+                        width:              150px;
+                        background-color:   black;
+                        border-radius:      10px;
+                        border-color:       white;
+                        color:              white;
+                        font-size:          15px;
+                        font-weight:        bold;
+                        display:            flex;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        }
+
+#concert-info           {
+                        color:              white;
+                        display:            flex;
+                        flex-direction:     column;
+                        font-size:          20px;
+                        padding-top:        10px;
+                        }
+
+#concert-new            {
+                        display:            flex;
+                        align-items:        center;
+                        flex-direction:     column;
+                        }
+
+#concert-new-header     {
+                        height:             150px;
+                        width:              100%;
+                        display:            flex;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        font-size:          25px;
+                        }
+
+#concert-new-header a   {
+                        height:             60px;
+                        width:              100px;
+                        background-color:   black;
+                        display:            flex;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        color:              white;
+                        border-radius:      10px;
+                        border:             2px solid white;
+                        }
+
+#concert-show           {
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        height:             100%;
+                        width:              100%;
+                        }
+
+#concert-show-card      {
+                        height:             500px;
+                        width:              400px;
+                        background-color:   black;
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-between;
+                        align-items:        center;
+}
+
+#concert-show-buttons   {
+                        display:            flex;
+                        flex-direction:     row;
+                        justify-content:    space-around;
+                        width:              400px;
+                        padding-bottom:     10px;
+                        }
+
+#concert-show-buttons a
+                        {
+                        height:             30px;
+                        width:              50px;
+                        background-color:   white;
+                        text-align:         center;
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        border-radius:      5px;
+                        font-weight:        bold;
+                        }
+
+#dashboard-backlink     {
+                        display:            flex;
+                        align-items:        center;
+                        flex-direction:     column;
+                        height:             50px;
+                        justify-content:    space-around;
+
+
+                        }
+
+#dashboard-backlink a   {
+                        height:             40px;
+                        width:              50px;
+                        text-align:         center;
+                        color:              white;
+                        background-color:   black;
+                        border-radius:      10px;
+                        border:             2px solid white;
+                        padding-top:        15px;
+                        }
+
+
+
+#dashboard-header       {
+                        text-align:         center;
+                        font-size:          50px;
+                        font-weight:        bold;
+                        height:             60px;
+                        width:              100%;
+                        color:              white;
+                        }
+
+#dashboard-middle       {
+                        width:              100%;
+                        display:            flex;
+                        justify-content:    center;
+                        }
+
+#date                   {
+                        color:              white;
+                        }
+
+#genre                  {
+                        margin-left:        20px;
+                        align-items:        center;
+                        font-weight:        bold;
+                        }
+
+
+#header                 {
+                        background-color:   #A9C0DC;
+                        opacity:            .85;
+                        height:             200px;
+                        width:              100%;
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-between;
+
+}
+
+#login-logo-div         {
+                        display:            flex;
+                        justify-content: space-around;
+                        }
+
 
 #nav-link               {
                         display:            flex;
                         flex-direction:     row;
-                        font-size:          20px;
-                        justify-content:    space-between;
+                        font-size:          30px;
+                        justify-content:    space-around;
+                        align-items:        center;
                         flex-grow:          2;
                         position:           relative;
                         float:              left;
-                        width:              100px;
-                        height:              100px;
-                        background-position: 50% 50%;
-                        background-repeat:   no-repeat;
-                        background-size:     cover;
+                        height:             160px;
+                        background-position:50% 50%;
+                        background-repeat:  no-repeat;
+                        background-size:    cover;
                         }
 
 #nav-link .link         {
                         text-align:         center;
                         vertical-align:     middle;
                         line-height:        200px;
-                        // display:            flex;
-                        // flex-direction:     row;
-                        // font-size:          30px;
-                        // justify-content:    space-around;
-                        // flex-grow:          2;
+                        }
+
+#new-concert-text       {
+                        font-size:          28px;
+                        text-align:         center;
+                        }
+
+
+#nav-logout             {
+                        margin-right:       20px;
                         }
 
 #no-matches             {
@@ -225,15 +559,10 @@ a:visited               {
                         }
 
 
-#pagination             {
-                        height:             34px;
-                        width:              100%;
-                        }
-
 
 #root-logo              {
                         height:             200px;
-                        width:              600px;
+                        width:              700px;
                         display:            flex;
                         align-items:        center;
                         justify-content:    center;
@@ -243,27 +572,62 @@ a:visited               {
                         border-color:       white;
                         }
 
-#session-new-left       {
-                        height:             400px;
+#session-form-button
+                        {
+                        height:             100px;
+                        width:              400px;
+                        display:            flex;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        align-self:         stretch;
+                        }
+
+
+#session-form-button input
+                        {
+                        height:             50px;
+                        width:              100px;
+                        background-color:   black;
+                        border-radius:      15px;
+                        border-color:       black;
+                        color:              white;
+                        font-size:          15px;
+                        font-weight:        bold;
+                        display:            flex;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        }
+
+#session-logo-text      {
+                        font-size:          50px;
+                        color:              white;
+                        text-shadow:        2px 2px black;
+
+}
+
+#session-new-box        {
+                        border:             5px solid black;
+                        border-radius:      25px;
+                        height:             500px;
                         width:              400px;
                         display:            flex;
                         flex-direction:     column;
                         justify-content:    space-around;
+                        opacity:            .9;
+                        background-color:   grey;
                         }
 
-#session-new-right      {
-                        height:             400px;
-                        width:              400px;
-                        background-image:   url("plant.jpeg");
-                        background-repeat:  no-repeat;
-                        background-size:    cover;
-                        }
+#session-new-box {
 
-#session-new            {
+}
+
+#session-new-page       {
+                        width:              100%;
+                        height:             100%;
                         display:            flex;
                         flex-direction:     row;
-                        justify-content:    space-around;
-                        align-self:         center;
+                        justify-content:    center;
+                        align-items:        center;
                         }
 
 #session-new-form       {
@@ -275,9 +639,15 @@ a:visited               {
 
 #show-logo              {
                         text-align:         center;
-                        vertical-align:     middle;
-                        line-height:        200px;
+                        height:             160px;
+                        line-height:        160px;
+                        font-size:          100px;
                         flex-grow:          1;
+                        display:  flex;
+                        justify-content: space-around;
+                        align-items:center;
+                        color:              white;
+                        text-shadow:        3px 3px #2d3635;
                         }
 
 #table-header           {
@@ -286,4 +656,37 @@ a:visited               {
 
 #table-header th        {
 
+                        }
+
+#user-form-button       {
+                        width: 400px;
+                        display:            flex;
+                        justify-content:    space-around;
+                        }
+
+
+#user-form-button input
+                        {
+                        height:             50px;
+                        width:              100px;
+                        background-color:   black;
+                        border-radius:      15px;
+                        border-color:       black;
+                        color:              white;
+                        font-size:          15px;
+                        font-weight:        bold;
+                        }
+
+#user-form-button a     {
+                        height:             50px;
+                        width:              100px;
+                        background-color:   black;
+                        border-radius:      15px;
+                        border-color:       black;
+                        color:              white;
+                        font-size:          15px;
+                        font-weight:        bold;
+                        display:            flex;
+                        justify-content:    space-around;
+                        align-items:        center;
                         }

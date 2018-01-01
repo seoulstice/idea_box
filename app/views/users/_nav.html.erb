@@ -1,13 +1,13 @@
 
-  <div class="icon-links">
+  <div class="tooltip">
     <%= link_to image_tag("logos/admin.png"), admin_dashboard_path if current_admin? %>
-    <span class="icon-message">Admin Access</span>
+    <span class="tooltiptext">Admin Access</span>
   </div>
-  <div class="icon-links">
+  <div class="tooltip">
     <%= link_to image_tag("logos/calendaricon.png"), new_user_concert_path(current_user) %>
-    <span class="icon-message">Set Reminder</span>
+    <span class="tooltiptext">Set Reminder</span>
   </div>
-  <div class="icon-links">
+  <div class="tooltip">
     <%= link_to image_tag("logos/logout.png"), logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } if logged_in? %>
-    <span class="icon-message"><p>Log Out</p></span>
+    <span class="tooltiptext" id="nav-logout"><p>Log Out</p></span>
   </div>

@@ -1,12 +1,11 @@
-<div class="">
-  <%= link_to "Back", user_path(current_user) %>
-</div>
-
-
-<div class="">
-  <h1>Create a New Concert</h1>
-</div>
-
-<div class="">
-  <%= render partial: "form" %>
-</div>
+<section id="concert-new">
+  <div id="concert-new-header">
+    <%= link_to "Back", user_path(current_user) %>
+  </div>
+  <div id="session-new-box">
+    <section id="new-concert-text">
+      <h1>New Concert Reminder</h1>
+    </section>
+    <%= render partial: "form" %>
+  </div>
+</section>

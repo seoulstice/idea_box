@@ -1,8 +1,8 @@
 class Admin::AdminController < Admin::BaseController
 
   def dashboard
-    @categories = Category.all
-    @images = Image.all
+    @genres = Genre.order(:classification).paginate(:page => params[:genres_page])
+    @images = Image.order(:name).paginate(:page => params[:images_page])
   end
 
 end

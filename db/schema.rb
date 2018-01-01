@@ -10,16 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171229214729) do
+ActiveRecord::Schema.define(version: 20171231212336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "categories", force: :cascade do |t|
-    t.string "classification"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "concert_images", force: :cascade do |t|
     t.bigint "concert_id"
@@ -33,11 +27,17 @@ ActiveRecord::Schema.define(version: 20171229214729) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "category_id"
+    t.bigint "genre_id"
     t.boolean "purchased"
     t.datetime "date"
-    t.index ["category_id"], name: "index_concerts_on_category_id"
+    t.index ["genre_id"], name: "index_concerts_on_genre_id"
     t.index ["user_id"], name: "index_concerts_on_user_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "classification"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "images", force: :cascade do |t|
@@ -65,6 +65,6 @@ ActiveRecord::Schema.define(version: 20171229214729) do
 
   add_foreign_key "concert_images", "concerts"
   add_foreign_key "concert_images", "images"
-  add_foreign_key "concerts", "categories"
+  add_foreign_key "concerts", "genres"
   add_foreign_key "concerts", "users"
 end

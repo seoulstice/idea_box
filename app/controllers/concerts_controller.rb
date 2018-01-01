@@ -4,12 +4,12 @@ class ConcertsController < ApplicationController
 
   def new
     @concert = Concert.new
-    @categories = Category.order(:classification)
+    @genres = Genre.order(:classification)
     @images = Image.order(:name)
   end
 
   def create
-    @categories = Category.order(:classification)
+    @genres = Genre.order(:classification)
     @images = Image.order(:name)
     @concert = @user.concerts.new(concert_params)
     # binding.pry
@@ -24,7 +24,7 @@ class ConcertsController < ApplicationController
   end
 
   def edit
-    @categories = Category.order(:classification)
+    @genres = Genre.order(:classification)
     @images = Image.order(:name)
   end
 
@@ -47,7 +47,7 @@ class ConcertsController < ApplicationController
   private
 
     def concert_params
-      params.require(:concert).permit(:name, :purchased, :date, :category_id, {:image_ids => []})
+      params.require(:concert).permit(:name, :purchased, :date, :genre_id, {:image_ids => []})
     end
 
     def set_concert
