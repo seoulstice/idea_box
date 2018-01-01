@@ -11,7 +11,7 @@ class Image < ApplicationRecord
                                         aws_access_key_id: ENV["AWSAccessKeyId"],
                                         aws_secret_access_key: ENV["AWSSecretKey"],
                                         },
-                    fog_directory: ENV["FOG-DIRECTORY"]
+                    fog_directory: ENV["FOG_DIRECTORY"]
 
   def self.per_page
     10
