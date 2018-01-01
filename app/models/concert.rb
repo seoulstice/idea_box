@@ -1,6 +1,6 @@
 class Concert < ApplicationRecord
   include ActionView::Helpers::DateHelper
-  validates :name, presence: true, length: { in: 6..25 }
+  validates :name, presence: true, length: { in: 0..25 }
   belongs_to :user
   belongs_to :genre
   has_many :concert_images, dependent: :nullify

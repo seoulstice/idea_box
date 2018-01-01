@@ -3,4 +3,7 @@ class Image < ApplicationRecord
   has_many :concert_images
   has_many :concerts, through: :concert_images
 
+  def self.per_page
+    10
+  end
 end

@@ -1,15 +1,19 @@
-<div class="">
-  <h1>Admin Dashboard</h1>
+<div id="dashboard-header">
+  Admin Dashboard
 </div>
-<div class="">
+<div id="dashboard-backlink">
+  <%= link_to "Back", user_path(current_user) %>
+</div>
+<div class="genres">
   <section>
-    <h3>Genres Index</h3>
+    Genres Index
   </section>
   <section>
     <ul><% @genres.each do |genre| %>
     <li><%= genre.classification %>
     <%= link_to "Delete", admin_genre_path(genre), method: :delete, data: { confirm: 'Are you sure?' } %></li>
     <% end %></ul>
+    <%= will_paginate @genres %>
   </section>
   <section>
     <%= link_to "Create Genre", new_admin_genre_path %>
@@ -22,5 +26,6 @@
     <% @images.each do |image| %>
       <%= image_tag image.image.thumb.url unless image.image.thumb.url.nil? %></td>
     <% end %>
+    <%= will_paginate @images %>
   <%= link_to "Create Image", new_admin_image_path %>
 </div>

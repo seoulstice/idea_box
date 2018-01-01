@@ -19,6 +19,7 @@
       <%= f.label :name_like, "Search Concerts by Name" %>
       <%= f.text_field :name_like %>
 
+      <%= submit_tag("Reset Form", { :name => 'reset', :id => 'reset_button', :type => "reset" }) %>
       <%= f.submit "Search" %>
       <% end %>
     </section>

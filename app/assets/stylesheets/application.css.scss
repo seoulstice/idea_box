@@ -150,6 +150,12 @@ p                       {
                         width:              100%;
                         }
 
+.genres                 {
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        align-items:        center;
+}
 .hidden-text            {
                         display:            none;
                         }
@@ -199,12 +205,13 @@ p                       {
                         justify-content:    space-between;
                         align-items:        center;
                         font-size:          18px;
-                        color:              white;
+                        color:              black;
                         }
 
 .session-form-elements input, select
                         {
                         margin-right:       20px;
+                        border:             2px solid grey;
                         }
 
 .session-form-elements a
@@ -215,7 +222,7 @@ p                       {
 
 .session-form-elements a:hover
                         {
-                          text-decoration:  underline;
+                        text-decoration:  underline;
                         }
 
 .session-form-elements label
@@ -358,7 +365,22 @@ p                       {
                         border:             2px solid white;
                         }
 
+#dashboard-header       {
+                        text-align:         center;
+                        font-size:          50px;
+                        font-weight:        bold;
+                        height:             60px;
+                        width:              100%;
+                        color:              white;
+                        }
 
+#dashboard-backlink     {
+                        display:            flex;
+                        align-items:        center;
+                        flex-direction:     column;
+                        height:             50px;
+                        justify-content:    space-around;
+                        }
 
 #genre                  {
                         margin-left:        20px;
@@ -468,15 +490,15 @@ p                       {
 }
 
 #session-new-box        {
-                        border:             5px solid white;
+                        border:             5px solid black;
                         border-radius:      25px;
                         height:             500px;
                         width:              400px;
                         display:            flex;
                         flex-direction:     column;
                         justify-content:    space-around;
-                        opacity:            .8;
-                        background-color:   #8e8a8b;
+                        opacity:            .9;
+                        background-color:   grey;
                         }
 
 #session-new-box {
