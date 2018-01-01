@@ -147,6 +147,8 @@ p                       {
                         flex-direction:     column;
                         align-items:        center;
                         justify-content:    space-around;
+                        padding-bottom:     10px;
+                        padding-top:        10px;
                         }
 
 .flash                  {
@@ -506,8 +508,7 @@ p                       {
 
 
 #header                 {
-                        background-color:   #A9C0DC;
-                        opacity:            .85;
+
                         height:             200px;
                         width:              100%;
                         display:            flex;
