@@ -1,6 +1,6 @@
 class ConcertsController < ApplicationController
   before_action :set_concert, only: [:edit, :update, :destroy, :show]
-  before_action :set_user, only: [:new, :create, :edit]
+  before_action :set_user, only: [:new, :create, :edit, :update]
 
   def new
     @concert = Concert.new
@@ -29,7 +29,9 @@ class ConcertsController < ApplicationController
   end
 
   def update
-    @concert.update(concert_params)
+    concert = @concert
+    concert.update(concert_params)
+    @concert.concert_images.update(image_id: params[:concert][:image_ids].to_i)
     flash[:success] = "Concert successfully edited."
     redirect_to user_path(current_user)
   end
