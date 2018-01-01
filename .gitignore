@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/.env
 
 /node_modules
 /yarn-error.log
@@ -20,5 +21,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
 
 /config/initializers/app_environment_variables.rb
