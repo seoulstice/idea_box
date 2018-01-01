@@ -5,10 +5,11 @@
   <section id="concert-show-card">
     <div id="concert-info">
       <section>
-        <%= @concert.name %> in <%= @concert.time_until %>
+        <%= @concert.name %></br>
+        in <%= @concert.time_until %>
       </section>
       <section>
-        Genre : <%= @concert.genre.classification %>
+        Genre - <%= @concert.genre.classification %>
       </section>
       <section>
         Ticket Purchased? <%= @concert.purchased? %>

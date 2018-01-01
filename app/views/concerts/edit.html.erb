@@ -1,6 +1,11 @@
-<div class="">
-  <h1>Edit A Concert</h1>
-</div>
-<div class="">
-  <%= render partial: "form" %>
-</div>
+<section id="concert-edit">
+  <div id="concert-new-header">
+    <%= link_to "Back", user_concert_path(current_user, params[:id]) %>
+  </div>
+  <div id="concert-edit-box">
+    <section id="new-concert-text">
+      Edit A Concert
+      <%= render partial: "form" %>
+    </section>
+  </div>
+</section>

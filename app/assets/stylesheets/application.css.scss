@@ -387,7 +387,11 @@ p                       {
                         color:              white;
                         display:            flex;
                         flex-direction:     column;
-                        font-size:          20px;
+                        font-size:          18px;
+                        padding:            10px;
+                        }
+
+#concert-info section   {
                         padding-top:        10px;
                         }
 
@@ -396,6 +400,25 @@ p                       {
                         align-items:        center;
                         flex-direction:     column;
                         }
+
+#concert-edit           {
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        align-items:        center;
+                        }
+
+#concert-edit-box       {
+                        display:            flex;
+                        flex-direction:     column;
+                        justify-content:    space-around;
+                        background-color:   grey;
+                        height:             500px;
+                        width:              400px;
+                        border:             5px solid black;
+                        border-radius:      10px;
+
+}
 
 #concert-new-header     {
                         height:             150px;
@@ -435,7 +458,9 @@ p                       {
                         flex-direction:     column;
                         justify-content:    space-between;
                         align-items:        center;
-}
+                        border:             5px solid white;
+                        border-radius:      10px;
+                        }
 
 #concert-show-buttons   {
                         display:            flex;
@@ -514,8 +539,7 @@ p                       {
                         display:            flex;
                         flex-direction:     column;
                         justify-content:    space-between;
-
-}
+                        }
 
 #login-logo-div         {
                         display:            flex;
@@ -545,7 +569,7 @@ p                       {
                         }
 
 #new-concert-text       {
-                        font-size:          28px;
+                        font-size:          30px;
                         text-align:         center;
                         }
 
@@ -603,8 +627,7 @@ p                       {
                         font-size:          50px;
                         color:              white;
                         text-shadow:        2px 2px black;
-
-}
+                        }
 
 #session-new-box        {
                         border:             5px solid black;
@@ -617,10 +640,6 @@ p                       {
                         opacity:            .9;
                         background-color:   grey;
                         }
-
-#session-new-box {
-
-}
 
 #session-new-page       {
                         width:              100%;
