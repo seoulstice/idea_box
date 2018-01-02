@@ -23,9 +23,9 @@ CarrierWave.configure do |config|
       config.fog_use_ssl_for_aws = false
   end
 
-  config.aws_credentials = {
-    access_key_id:     ENV.fetch('AWSAccessKeyId'),
-    secret_access_key: ENV.fetch('AWSSecretKey'),
-    region:            ENV.fetch('AWS_REGION')
-  }
+  # config.aws_credentials = {
+  #   access_key_id:     ENV.fetch('AWSAccessKeyId'),
+  #   secret_access_key: ENV.fetch('AWSSecretKey'),
+  #   region:            ENV.fetch('AWS_REGION')
+  # }
 end
