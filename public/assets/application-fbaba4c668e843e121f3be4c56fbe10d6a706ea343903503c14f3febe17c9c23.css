@@ -1,0 +1,846 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 18, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+  background-image: url("welcome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 27, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 32, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+input[type=text] {
+  padding: 3px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* line 39, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+input[type=password] {
+  padding: 3px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* line 47, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+/* line 51, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+input[type=password]:focus {
+  border: 3px solid #555;
+}
+
+/* line 55, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+a:link {
+  text-decoration: none;
+}
+
+/* line 59, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+a:visited {
+  text-decoration: none;
+}
+
+/* line 63, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+p {
+  height: auto;
+}
+
+/* line 67, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.admin-text {
+  font-size: 20px;
+}
+
+/* line 71, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.apple_pagination {
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
+
+/* line 77, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.apple_pagination a, .apple_pagination span {
+  padding: 0.2em 0.3em;
+}
+
+/* line 82, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.apple_pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 87, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.apple_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #bebebe;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+
+/* line 101, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.apple_pagination a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 106, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.apple_pagination a:hover, .apple_pagination a:focus, .apple_pagination a:visited {
+  text-decoration: underline;
+  color: white;
+}
+
+/* line 112, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.concert-card-child {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: grey;
+  border-radius: 10px;
+  border: 3px solid white;
+  color: white;
+}
+
+/* line 123, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.concert-card-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 350px;
+}
+
+/* line 131, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.concert-image {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 138, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.concert-image img {
+  display: inline;
+  float: none;
+}
+
+/* line 143, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.concert-name {
+  width: 300px;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* line 155, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.flash {
+  height: 20px;
+  width: 100%;
+  color: white;
+}
+
+/* line 161, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.genres {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+}
+
+/* line 174, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.genres a {
+  color: grey;
+}
+
+/* line 178, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.genres a:hover {
+  text-decoration: underline;
+}
+
+/* line 182, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.hidden-text {
+  display: none;
+}
+
+/* line 186, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.icon-message {
+  border: 1px solid #ccc;
+  display: none;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 196, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.image-boxes {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* line 209, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.image-boxes-button {
+  height: 30px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 219, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.images {
+  align-self: center;
+  color: white;
+  background-color: black;
+  text-align: center;
+  height: 200px;
+  width: 600px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+/* line 230, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.images a {
+  color: grey;
+}
+
+/* line 234, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.images a:hover {
+  text-decoration: underline;
+}
+
+/* line 239, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.login-logo {
+  color: white;
+  text-shadow: 1.5px 1.5px #2d3635;
+}
+
+/* line 244, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.login-logo-text {
+  font-size: 60px;
+  color: white;
+  width: 320px;
+  text-shadow: 2px 2px black;
+}
+
+/* line 252, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  vertical-align: middle;
+  height: 50px;
+}
+
+/* line 260, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.root {
+  display: flex;
+  height: 800px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* line 267, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.session-form-elements {
+  display: flex;
+  height: 50px;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: black;
+}
+
+/* line 277, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.session-form-elements input, select {
+  margin-right: 20px;
+  border: 2px solid grey;
+}
+
+/* line 283, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.session-form-elements a {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+/* line 289, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.session-form-elements a:hover {
+  text-decoration: underline;
+}
+
+/* line 294, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.session-form-elements label {
+  margin-left: 20px;
+}
+
+/* line 299, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.session-form-elements p {
+  margin-left: 20px;
+}
+
+/* line 304, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.session-form-elements a:visited {
+  color: white;
+}
+
+/* line 309, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 317, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.sort-bar {
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+/* line 322, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* line 327, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.table td, .table th {
+  border: 1px solid #ddd;
+}
+
+/* line 331, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.table th {
+  text-align: center;
+  background-color: #999966;
+  color: white;
+}
+
+/* line 337, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  font-size: 20px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+/* line 350, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* line 354, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.user-show-header {
+  font-size: 60px;
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* line 363, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+.welcome-link {
+  font-size: 800%;
+  color: white;
+  align-items: center;
+}
+
+/* line 369, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#back-button {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* line 382, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#back-button a:visited {
+  color: white;
+}
+
+/* line 387, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-form-button {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* line 396, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-form-button input {
+  height: 50px;
+  width: 150px;
+  background-color: black;
+  border-radius: 10px;
+  border-color: white;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 411, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-info {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* line 419, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-info section {
+  padding-top: 10px;
+}
+
+/* line 423, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-new {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 429, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 436, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-edit-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: grey;
+  height: 500px;
+  width: 400px;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+/* line 448, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-new-header {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+}
+
+/* line 457, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-new-header a {
+  height: 60px;
+  width: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+/* line 469, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 478, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-show-card {
+  height: 500px;
+  width: 400px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+/* line 490, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-show-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 400px;
+  padding-bottom: 10px;
+}
+
+/* line 498, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#concert-show-buttons a {
+  height: 30px;
+  width: 50px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* line 511, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#dashboard-backlink {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50px;
+  justify-content: space-around;
+}
+
+/* line 521, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#dashboard-backlink a {
+  height: 40px;
+  width: 50px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding-top: 15px;
+}
+
+/* line 534, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#dashboard-header {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  height: 60px;
+  width: 100%;
+  color: white;
+}
+
+/* line 543, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#dashboard-middle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 549, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#date {
+  color: white;
+}
+
+/* line 553, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#genre {
+  margin-left: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* line 560, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#header {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* line 569, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400x;
+}
+
+/* line 576, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#image-index {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 581, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#login-logo-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 587, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#nav-link {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 2;
+  position: relative;
+  float: left;
+  height: 160px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 602, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#nav-link .link {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px;
+}
+
+/* line 608, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#new-concert-text {
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* line 616, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#new-genre-box {
+  display: flex;
+  height: 350px;
+  width: 400px;
+  background-color: grey;
+  border: 5px solid white;
+  border-radius: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* line 627, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#new-genre-form {
+  height: 200px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* line 635, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#new-genre-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+/* line 644, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#new-genre-text {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  height: 80px;
+  width: 400px;
+}
+
+/* line 653, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#nav-logout {
+  margin-right: 20px;
+}
+
+/* line 657, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#no-matches {
+  height: 400px;
+  font-size: 30px;
+}
+
+/* line 664, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#root-logo {
+  height: 200px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 3px 3px #2d3635;
+  border-style: solid;
+  border-width: 4px;
+  border-color: white;
+}
+
+/* line 676, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#session-form-button {
+  height: 100px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: stretch;
+}
+
+/* line 687, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#session-form-button input {
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  border-radius: 15px;
+  border-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 702, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#session-logo-text {
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+/* line 708, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#session-new-box {
+  border: 5px solid black;
+  border-radius: 25px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  opacity: .9;
+  background-color: grey;
+}
+
+/* line 720, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#session-new-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 729, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#session-new-form {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 736, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#show-logo {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  font-size: 100px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  text-shadow: 3px 3px #2d3635;
+}
+
+/* line 749, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#table-header {
+  height: 30px;
+}
+
+/* line 757, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#user-form-button {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 764, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#user-form-button input {
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  border-radius: 15px;
+  border-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 776, /Users/youngjung/turing/2module/projects/idea_box/app/assets/stylesheets/application.css.scss */
+#user-form-button a {
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  border-radius: 15px;
+  border-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
