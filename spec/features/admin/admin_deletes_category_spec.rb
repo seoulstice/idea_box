@@ -1,9 +1,9 @@
 require "rails_helper"
 
 describe "When the Admin visits Admin Dashboard path" do
-  it "the Admin can delete an existing category"  do
-    category_1 = create(:category)
-    category_2 = create(:category)
+  it "the Admin can delete an existing genre"  do
+    genre_1 = Genre.create!(classification: "Rock")
+    genre_1 = Genre.create!(classification: "Pop")
 
     admin = User.create(name: "Young",
                         email: "yjj@gmail.com",
@@ -12,11 +12,13 @@ describe "When the Admin visits Admin Dashboard path" do
 
     visit admin_dashboard_path
 
-    click_link("Delete", match: :first)
-
+    within(:css, "div.genres") do
+      click_link("Delete", match: :first)
+    end
+    
     expect(current_path).to eq(admin_dashboard_path)
     save_and_open_page
-    expect(page).to_not have_content("#{category_1.classification}")
-    expect(page).to have_content("#{category_2.classification}")
+    expect(page).to_not have_content("#{genre_1.classification}")
+    expect(page).to have_content("#{genre_2.classification}")
   end
 end
