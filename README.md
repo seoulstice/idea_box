@@ -1,4 +1,12 @@
-# README
+# concertBox README
+
+(https://raw.githubusercontent.com/seoulstice/idea_box/master/app/assets/images/concertbox-front.png)
+
+
+
+
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
