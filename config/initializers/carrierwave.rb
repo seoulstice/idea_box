@@ -13,14 +13,19 @@ CarrierWave.configure do |config|
 
   if Rails.env.production?
     CarrierWave.configure do |config|
-      config.fog_credentials = {
+      config.storage    = :aws
+      config.aws_bucket = "concert-box-app"
+      config.aws_acl    = :public_read
+      config.aws_authenticated_url_expiration = 60 * 60 * 24 * 365
+
+      config.aws_credentials = {
             :provider                   =>  'AWS',
             :aws_access_key_id          =>  ENV['AWSAccessKeyId'],
             :aws_secret_access_key      =>  ENV['AWSSecretKey'],
             :region                     =>  ENV['AWS_REGION'],
       }
-      config.fog_directory              =   ENV['S3_BUCKET_NAME']
-      config.fog_use_ssl_for_aws = false
+      config.storage = :aws
+      config.cache_dir = "#{Rails.root}/tmp/uploads"
     end
   end
 end
