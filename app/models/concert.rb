@@ -28,6 +28,6 @@ class Concert < ApplicationRecord
   end
 
   def readable_date
-    date.strftime("%A - %B %e, %Y")
+    date.strftime("%A - %B %e, %Y @ %k%P")
   end
 end

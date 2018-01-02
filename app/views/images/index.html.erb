@@ -1,16 +1,15 @@
 <section id="image-index">
-  <div class="">
+  <div id="image-index-button">
     <%= link_to "Back", new_user_concert_path(current_user) %>
   </div>
-  <div class="">
+  <div id="image-index-area">
     <% @images.each do |image| %>
-    <div id="images-area">
-      <section>
+      <section id="image">
         <%= image_tag image.image.url unless image.image.url.nil? %>
-        <%= image.name %>
       </section>
-    </div>
     <% end %>
-    <%= will_paginate @images %>
+      <section>
+        <%= will_paginate @images %>
+      </section>
   </div>
 </section>

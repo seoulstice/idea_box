@@ -23,7 +23,4 @@ class SessionsController < ApplicationController
     redirect_to "/"
   end
 
-  def failure
-    flash[:notice] = "Sorry, but you didn't allow access to our app!"
-  end
 end

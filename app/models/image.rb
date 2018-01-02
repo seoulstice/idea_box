@@ -4,6 +4,6 @@ class Image < ApplicationRecord
   has_many :concerts, through: :concert_images, dependent: :destroy
 
   def self.per_page
-    10
+    8
   end
 end
