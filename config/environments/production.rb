@@ -37,6 +37,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
   config.serve_static_assets = false
 
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
