@@ -1,12 +1,15 @@
-<div class="">
+<div id="image-box">
   <%= form_for [:admin, @image] do |f| %>
-    <%= f.label :image %>
+  <section class="image-boxes">
+    <%= f.label :image, "Choose Image" %>
     <%= f.file_field :image %>
-    <%= f.hidden_field :image_cache %>
-
-    <%= f.label :name %>
+  </section>
+  <section class="image-boxes">
+    <%= f.label :name, "Image Name" %>
     <%= f.text_field :name %>
-
+  </section>
+  <section class="image-boxes-button">
     <%= f.submit "Upload" %>
+  </section>
   <% end %>
 </div>

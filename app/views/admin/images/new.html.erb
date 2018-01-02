@@ -1,6 +1,13 @@
-<div class="">
-  <h1>Image Uploader</h1>
-</div>
-<div class="">
-  <%= render partial: "form" %>
-</div>
+<section id="new-genre-page">
+  <div id="dashboard-backlink">
+    <%= link_to "Back", admin_dashboard_path %>
+  </div>
+  <div id="new-genre-box">
+    <section id="new-genre-text">
+      <p>Image Uploader</p>
+    </section>
+    <section id="new-genre-form">
+      <%= render partial: "form" %>
+    </section>
+  </div>
+</section>
