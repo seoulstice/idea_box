@@ -12,7 +12,6 @@ class ConcertsController < ApplicationController
     @genres = Genre.order(:classification)
     @images = Image.order(:name)
     @concert = @user.concerts.new(concert_params)
-    # binding.pry
     if @concert.save!
       @concert.concert_images.create(image_id: params[:concert][:image_ids].to_i)
       flash[:success] = "Concert successfully created."
