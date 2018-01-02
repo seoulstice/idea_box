@@ -14,12 +14,17 @@ class SessionsController < ApplicationController
         flash[:danger] = "Invalid email/password combination"
         render :new
       end
-    end
+
+  end
 
   def destroy
     @user = User.find_by(params[:id])
     log_out
     flash[:notice] = "You're now logged out."
     redirect_to "/"
+  end
+
+  def failure
+    flash[:notice] = "Sorry, but you didn't allow access to our app!"
   end
 end

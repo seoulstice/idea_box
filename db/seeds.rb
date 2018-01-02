@@ -32,7 +32,7 @@ end
 IMAGES.each do |image, name|
   # Image.create!(image: File.open(Rails.root + "app/assets/images/artists/#{image}"), name: "#{name}")
   image = Image.create!(name: "#{name}")
-  image.image = Rails.root.join("app/assets/images/artists/#{image}").open
+  image.image = Rails.root.join("app/assets/images/artists/#{image.name}").open
   image.save!
 end
 
