@@ -192,6 +192,29 @@ p                       {
                         text-transform:     uppercase;
                         }
 
+.image-boxes            {
+                        display:            flex;
+                        flex-direction:     row;
+                        width:              350px;
+                        height:             40px;
+                        align-items:        center;
+                        justify-content:    space-between;
+                        padding-right:      20px;
+                        padding-left:       20px;
+                        color:              white;
+                        font-weight:        bold;
+                        }
+
+.image-boxes-button     {
+                        height:             30px;
+                        width:              400px;
+                        display:            flex;
+                        align-items:        center;
+                        justify-content:    center;
+                        flex-direction:     column;
+                        }
+
+
 .images                 {
                         align-self:         center;
                         color:              white;
@@ -542,6 +565,13 @@ p                       {
                         justify-content:    space-between;
                         }
 
+#image-box              {
+                        display:            flex;
+                        flex-direction:     column;
+                        align-items:        center;
+                        width:              400x;
+                        }
+
 #image-index            {
                         display:            flex;
                         flex-direction:     column;
@@ -549,7 +579,7 @@ p                       {
 
 #login-logo-div         {
                         display:            flex;
-                        justify-content: space-around;
+                        justify-content:    space-around;
                         }
 
 
@@ -616,7 +646,7 @@ p                       {
                         font-weight:        bold;
                         height:             80px;
                         width:              400px;
-}
+                        }
 
 
 #nav-logout             {

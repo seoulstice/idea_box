@@ -1,10 +1,10 @@
 class Admin::ImagesController < Admin::BaseController
-
   def new
     @image = Image.new
   end
 
   def create
+    # binding.pry
     @image = Image.new(image_params)
     if @image.save
       flash[:success] = "You've created an image."
@@ -17,7 +17,7 @@ class Admin::ImagesController < Admin::BaseController
   private
 
     def image_params
-      params.require(:image).permit(:image, :image_cache :name)
+      params.require(:image).permit(:image, :name)
     end
 
 end
