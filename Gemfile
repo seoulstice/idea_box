@@ -35,7 +35,8 @@ gem 'fog-aws'
 gem 'searchlight'
 gem 'will_paginate', '~> 3.1.0'
 gem 'aws-sdk', '~> 3'
-gem 'carrierwave_direct'
+gem 'carrierwave-aws'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
