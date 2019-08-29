@@ -30,7 +30,7 @@ gem 'rake'
 gem "factory_bot_rails", "~> 4.0"
 gem 'figaro'
 gem 'carrierwave', '~> 1.0'
-gem 'mini_magick', '~> 4.3'
+gem 'mini_magick', '~> 4.9'
 gem 'fog-aws'
 gem 'searchlight'
 gem 'will_paginate', '~> 3.1.0'
