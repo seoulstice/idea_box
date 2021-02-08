@@ -29,7 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rake'
 gem "factory_bot_rails", "~> 4.0"
 gem 'figaro'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick', '~> 4.9'
 gem 'fog-aws'
 gem 'searchlight'
